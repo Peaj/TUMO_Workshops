@@ -103,7 +103,7 @@
         {
           "kind": "check",
           "text": {
-            "de": "Prüfen, dass alle Teens beide Dateien hochgeladen hat",
+            "de": "Prüfen, dass alle Teens beide Dateien hochgeladen haben",
             "en": "Check that every Teen has uploaded both files"
           },
           "note": {
