@@ -1,0 +1,265 @@
+{
+  "id": 7,
+  "title": { "de": "Licht", "en": "Lighting" },
+  "tumoTitle": { "de": "Level-Entwicklung", "en": "Level Creation" },
+  "takeaway": {
+    "de": "Die Teens setzen Directional, Point und Spot Light gezielt ein, um Stimmung und Blickführung in ihrem Level zu steuern, und haben ihr Level weitergebaut.",
+    "en": "Teens use Directional, Point and Spot Lights deliberately to shape mood and guide the player in their level, and have kept building their level."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1tr458nPxZIq9-uN7dHDRlM01jgo7EpkjHs-G_moJuhU",
+    "en": "https://docs.google.com/presentation/d/1shvd06KSK_BAW7BdguDaEh8GymuOdz6nkWl-tGJYuwU"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-7",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-7"
+  },
+  "sections": [
+    {
+      "id": "7.1",
+      "type": "review",
+      "title": { "de": "Rückblick", "en": "Review" },
+      "minutes": 15,
+      "slide": null,
+      "anchor": { "de": "#h.a9a4jckm02sc", "en": "#h.a9a4jckm02sc" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Ein paar Projekte aus Session 6 auf dem Beamer öffnen und Feedback geben",
+            "en": "Open a few Session 6 projects on the projector and give feedback"
+          },
+          "note": {
+            "de": "Immer erst loben, dann eine konkrete Verbesserung. Ton positiv und ermutigend.",
+            "en": "Praise first, then one concrete improvement. Keep the tone positive and encouraging."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Werkzeuge der letzten Session aufgreifen: wie hätten sie das Projekt verbessert?",
+            "en": "Revisit last session's tools: how would they have improved that project?"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Offene Fragen zu Session 6 sammeln und beantworten",
+            "en": "Collect and answer open questions about Session 6"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle haben ihr Projekt aus Session 6 im Unity Hub geöffnet",
+            "en": "Everyone has opened their Session 6 project from Unity Hub"
+          },
+          "note": {
+            "de": "Die Seite sagt \"neues Projekt öffnen\" und dann die Datei herunterladen. Gemeint ist: Projekt aus Session 6 laden und öffnen.",
+            "en": "The site says \"open a new project\" and then download the file. Presumably it means: load and open the Session 6 project."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Im Project-Fenster: Assets-Ordner, Haupt-Scene suchen, Doppelklick",
+            "en": "In the Project window: Assets folder, find the main Scene, double-click"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Kurz zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Briefly show Teens how to mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7.2",
+      "type": "presentation",
+      "title": { "de": "Beleuchtung in Spielen", "en": "Lighting in Games" },
+      "minutes": 15,
+      "slide": 4,
+      "anchor": { "de": "#h.8f96trtwz1vc", "en": "#h.8f96trtwz1vc" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Licht steuert Stimmung und Fokus im Level: sechs Gründe durchgehen",
+            "en": "Light controls mood and focus in a level: go through six reasons"
+          },
+          "note": {
+            "de": "Interessante Punkte, Wegfindung, Sicherheit/Gefahr (warm vs. rot/blinkend), Erkundungshinweise, Bewegung (flackernde Fackel), Umgebungsgeschichten.",
+            "en": "Points of interest, pathfinding, safety/danger (warm vs. red/flashing), exploration hints, movement (flickering torch), environmental storytelling."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Directional Light darf nie gelöscht werden, auch wenn alles andere weg ist",
+            "en": "Never delete the Directional Light, even when everything else goes"
+          },
+          "note": {
+            "de": "Es ist die Sonne des Levels, global und unabhängig von der Größe der Scene.",
+            "en": "It is the sun of the level, global and independent of the Scene's size."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Sonnenrichtung ändern: nur Rotation im Transform, nicht Position; Teens probieren es aus",
+            "en": "Change the sun direction: Rotation in the Transform only, not Position; Teens try it"
+          },
+          "note": {
+            "de": "Das Licht kommt aus der Skybox, die Position des Lights ist egal. Sonne am Himmel der Scene zeigen.",
+            "en": "The light comes from the Skybox, the Light's position does not matter. Show the sun in the Scene's sky."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Parameter des Directional Light: Color, Intensity, Shadow Type",
+            "en": "Directional Light parameters: Color, Intensity, Shadow Type"
+          },
+          "note": {
+            "de": "Intensity ca. 1,5-2 für klaren Tag, 0,5-1 für bewölkt; später selbst experimentieren. Shadow Type auf Soft Shadows stellen lassen, falls nicht schon gesetzt.",
+            "en": "Intensity about 1.5-2 for a clear day, 0.5-1 for overcast; experiment later. Have Teens set Shadow Type to Soft Shadows if not already."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Nachtscene bauen: Sonne unter den Horizont drehen (Rotation X > -10)",
+            "en": "Build a night Scene: rotate the sun below the horizon (Rotation X > -10)"
+          },
+          "note": {
+            "de": "Nötig, damit Point und Spot Light sichtbar wirken.",
+            "en": "Needed so Point and Spot Lights are clearly visible."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Point Light: Hierarchy, Lights, Point Light; ein Objekt beleuchten lassen; Range zeigen",
+            "en": "Point Light: Hierarchy, Lights, Point Light; Teens light an object; show Range"
+          },
+          "note": {
+            "de": "Vergleich: Lampe. Alle Sonnen-Parameter (Color, Intensity, Shadow Type) gibt es auch hier.",
+            "en": "Comparison: a lamp. All the sun's parameters (Color, Intensity, Shadow Type) exist here too."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Spot Light am selben Ort anlegen, auf ein Objekt richten; Spot Angle und Range zeigen",
+            "en": "Create a Spot Light in the same place, aim it at an object; show Spot Angle and Range"
+          },
+          "note": {
+            "de": "Vergleich: Taschenlampe. Spot Angle = Öffnungswinkel, also wie viel Fläche beleuchtet wird.",
+            "en": "Comparison: a flashlight. Spot Angle = cone width, i.e. how much area is lit."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Deutsche Folie/Seite: Lichtnamen und Parameter übersetzt, im Editor alles englisch",
+            "en": "German slides/site translate light names and parameters, the editor is all English"
+          },
+          "note": {
+            "de": "Gerichtetes Licht, Punktlicht, Scheinwerfer, Intensität, Schattentyp, Reichweite, Spot-Winkel, \"Himmelskastenbild\" (Skybox), \"Transformieren\" (Transform), Hierarchiefenster. Beim Spot Light steht auf der Seite fälschlich nochmal \"Punktlicht\".",
+            "en": "Gerichtetes Licht, Punktlicht, Scheinwerfer, Intensität, Schattentyp, Reichweite, Spot-Winkel, \"Himmelskastenbild\" (Skybox), \"Transformieren\" (Transform), Hierarchiefenster. The site wrongly says \"Punktlicht\" again for the Spot Light."
+          }
+        }
+      ]
+    },
+    {
+      "id": "7.3",
+      "type": "task",
+      "title": { "de": "Projekt weiterbauen", "en": "Continuing the Project" },
+      "minutes": 80,
+      "slide": 15,
+      "anchor": { "de": "#h.mpw3ppawirzy", "en": "#h.mpw3ppawirzy" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: Level aus Session 6 fertigstellen, jetzt mit Licht",
+            "en": "Task: finish the Session 6 level, now with lighting"
+          },
+          "note": {
+            "de": "Die Seite verlangt Licht nicht ausdrücklich, aber die Session handelt davon: ermutigen, es einzusetzen.",
+            "en": "The site does not explicitly require lighting, but it is the session's topic: encourage using it."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Folie mit den Level-Design-Prinzipien stehen lassen, kurz erinnern",
+            "en": "Keep the slide with the level design principles on screen, remind briefly"
+          },
+          "note": {
+            "de": "Folie 15 im Deck. Die Teens sollen beim Arbeiten darauf schauen können.",
+            "en": "Slide 15 in the deck. Teens should be able to glance at it while working."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: Licht gezielt eingesetzt (Wegführung, Stimmung) statt nur Standardsonne?",
+            "en": "Walk around: light used deliberately (guidance, mood) rather than just the default sun?"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Directional Light noch vorhanden, Shadows an, Werte nicht extrem",
+            "en": "Directional Light still there, shadows on, values not extreme"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7.4",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap Up" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.1nh9kiha5474", "en": "#h.1nh9kiha5474" },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Aufgabe in Classroom schon VOR der Session anlegen",
+            "en": "Create the Classroom assignment BEFORE the session"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: Projekt speichern, in Classroom hochladen",
+            "en": "About 10 min before the end: save the project, upload to Classroom"
+          },
+          "note": {
+            "de": "Speichern bei Bedarf noch einmal zeigen.",
+            "en": "Show how to save again if needed."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Projektdatei und 2-3 Screenshots der Arbeit hochladen",
+            "en": "Upload the project file and 2-3 screenshots of the work"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "id": 2,
+  "title": { "de": "3Cs und Startort", "en": "3Cs and Start Area" },
+  "tumoTitle": {
+    "de": "Level- und Spielsteuerung",
+    "en": "Level and Game Controls"
+  },
+  "takeaway": {
+    "de": "Die Teens kennen die 3Cs, Scale und lineares Level Design und haben mit Controller-Paket und fertigen Modellen den Startort ihres Levels gebaut.",
+    "en": "Teens know the 3Cs, scale and linear level design and have built the start area of their level with a controller package and ready-made models."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1TxFS6oxDSvqlq5uuuxZfjJ7rawI2_gSB2H3tD449enA",
+    "en": "https://docs.google.com/presentation/d/1j7bl2I1OtDTynOIbdIyeS3OFD-zy07kNr4SsUakvFo0"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-2",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-2"
+  },
+  "sections": [
+    {
+      "id": "2.1",
+      "type": "review",
+      "title": { "de": "Rückblick", "en": "Review" },
+      "minutes": 15,
+      "slide": null,
+      "anchor": { "de": "#h.qgqxnlrqqo43", "en": "#h.qgqxnlrqqo43" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Einige Projekte aus Session 1 öffnen und Feedback geben",
+            "en": "Open a few projects from session 1 and give feedback"
+          },
+          "note": {
+            "de": "Immer positiv und ermutigend: erst was gut ist, dann ein Verbesserungsvorschlag.",
+            "en": "Always positive and encouraging: what works first, then one suggestion."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Werkzeuge aus Session 1 wiederholen: Move / Rotate / Scale, Vertex Snap",
+            "en": "Recap tools from session 1: Move / Rotate / Scale, Vertex Snap"
+          },
+          "note": {
+            "de": "Zeigen, wie sie das jeweilige Projekt verbessert hätten.",
+            "en": "Show how they would have improved the project at hand."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Offene Fragen aus Session 1 klären",
+            "en": "Answer open questions from session 1"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Ankündigen: Heute beginnt das Abschlussprojekt, vorher kurz Level Design",
+            "en": "Announce: today the final project starts, first a bit of level design"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Show Teens how to mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2.2",
+      "type": "presentation",
+      "title": { "de": "Game Controller und die 3Cs", "en": "Game Controller and Rule of 3Cs" },
+      "minutes": 10,
+      "slide": 4,
+      "anchor": { "de": "#h.1asf1zl92mfx", "en": "#h.1asf1zl92mfx" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Controller = spielbare Figur, durch die man das Spiel spielt",
+            "en": "Controller = the playable character you play the game through"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Controller-Fotos und -Videos auf den Folien zeigen, je Funktion und Umgebung",
+            "en": "Show the controller photos and videos on the slides, with function and environment"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Ein Controller-Paket in Unity öffnen: Prefab-Ordner zeigen, Controller ausprobieren",
+            "en": "Open one controller package in Unity: show the Prefab folder, try the controller"
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "5 Min: Teens wählen Controller und Umgebung, laden das Paket und öffnen es in Unity",
+            "en": "5 min: Teens pick controller and environment, download the package, open it in Unity"
+          },
+          "note": {
+            "de": "Pakete liegen im gemeinsamen Drive-Ordner (derselbe wie in Classroom).",
+            "en": "Packages are in the shared Drive folder (the same one as in Classroom)."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle haben ein Paket importiert und das Projekt läuft",
+            "en": "Everyone has imported a package and the project runs"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Die 3Cs: Control, Camera, Character, zusammen sind sie der Player",
+            "en": "The 3Cs: Control, Camera, Character, together they are the player"
+          },
+          "note": {
+            "de": "Die deutsche Seite schreibt \"Steuerung, Kamera, Charakter\"; Folien und wir sagen 3Cs.",
+            "en": "The German site writes \"Steuerung, Kamera, Charakter\"; slides and we say 3Cs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "2.3",
+      "type": "presentation",
+      "title": { "de": "Controller und fertige Modelle benutzen", "en": "Using Controllers and Game Ready Models" },
+      "minutes": 20,
+      "slide": null,
+      "anchor": { "de": "#h.gmh34wnjhrxm", "en": "#h.gmh34wnjhrxm" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Main Scene im Project finden, per Doppelklick öffnen",
+            "en": "Find the main Scene in the Project window, open it by double-click"
+          },
+          "note": {
+            "de": "Das Demo-Paket stammt von Synty (Polygon Western, Asset Store).",
+            "en": "The demo package is by Synty (Polygon Western, Asset Store)."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "1 Min Scene erkunden, dann Play Mode starten, ca. 5 Min spielen, wieder beenden",
+            "en": "1 min explore the Scene, then enter Play Mode, play about 5 min, exit again"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Control: Tasten und Aktionen (Laufen, Springen); Teens 1 Min ausprobieren lassen",
+            "en": "Control: buttons and actions (walk, jump); let Teens try for 1 min"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Camera: wir bauen von oben, der Player sieht durch die Camera",
+            "en": "Camera: we build from above, the player sees through the Camera"
+          },
+          "note": {
+            "de": "Deshalb oft im Play Mode wie ein Player durchs Level laufen.",
+            "en": "So playtest often, walking through the level like a player."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Character: Maße zählen. 1 m breit passt nicht durch 0,5 m; Sprung 3 m = Lücken kleiner",
+            "en": "Character: dimensions matter. 1 m wide won't fit a 0.5 m gap; 3 m jump = smaller gaps"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Fertige Modelle per Drag and Drop in die Scene, mit Move / Rotate / Scale platzieren",
+            "en": "Drag ready-made models into the Scene, place with Move / Rotate / Scale"
+          },
+          "note": {
+            "de": "Alle Tools aus Session 1 gelten auch hier, bei Bedarf kurz wiederholen.",
+            "en": "All tools from session 1 apply here, recap briefly if needed."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Prefab: Empty GameObject nahe der Mitte anlegen, Objekte hineinziehen, ins Project ziehen",
+            "en": "Prefab: create an empty GameObject near the centre, drag objects in, drag it to Project"
+          },
+          "note": {
+            "de": "Nahe der Mitte, damit der Pivot nicht weit weg liegt. Änderung am Prefab gilt für alle Instanzen.",
+            "en": "Near the centre so the pivot isn't far away. A change to the Prefab applies to all instances."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Instanz skalieren und per Overrides auf alle Instanzen anwenden; 1-2 Min üben",
+            "en": "Scale an instance and apply it to all instances via Overrides; 1-2 min practice"
+          },
+          "note": {
+            "de": "Zum Schluss Löschen der Instanzen zeigen (markieren, löschen).",
+            "en": "Finish by showing how to delete instances (select, delete)."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Nur Prefabs aus dem mitgelieferten Prefab-Ordner verwenden",
+            "en": "Use only Prefabs from the provided Prefab folder"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Voreinstellungsordner\" und \"Fertigteile\" für Prefab.",
+            "en": "The German site says \"Voreinstellungsordner\" and \"Fertigteile\" for Prefab."
+          }
+        }
+      ]
+    },
+    {
+      "id": "2.4",
+      "type": "presentation",
+      "title": { "de": "Scale und Proportion", "en": "Scale and Proportion" },
+      "minutes": 5,
+      "slide": 11,
+      "anchor": { "de": "#h.dq16lgg9t3jg", "en": "#h.dq16lgg9t3jg" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Scale = Größenverhältnis der Objekte zueinander und zur Spielfigur",
+            "en": "Scale = size relation of objects to each other and to the character"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Maßstab ist der Mensch: Türen, Stufen, Wandhöhen, Tische, Griffe",
+            "en": "The human is the yardstick: doors, steps, wall heights, tables, handles"
+          },
+          "note": {
+            "de": "Regel: alles im Level realistisch relativ zur Körpergröße.",
+            "en": "Rule: everything in the level realistic relative to human height."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Gut und schlecht skalierte Beispiele zeigen: Wie wirkt das auf den Player?",
+            "en": "Show well and badly scaled examples: how does it feel to the player?"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Bäume, Felsen, Steine dürfen stark skaliert werden",
+            "en": "Trees, rocks and stones may be scaled a lot"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Gebäude und Deko vorsichtig skalieren: Tür muss menschengroß bleiben",
+            "en": "Scale buildings and decoration carefully: the door must stay human-sized"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2.5",
+      "type": "presentation",
+      "title": { "de": "Lineares Level Design", "en": "Linear Level Design" },
+      "minutes": 10,
+      "slide": 15,
+      "anchor": { "de": "#h.4va9mysuf10x", "en": "#h.4va9mysuf10x" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Lineares Level: von Punkt A über Hindernisse zu Punkt B, vorgegebener Pfad",
+            "en": "Linear level: from point A through obstacles to point B, a set path"
+          },
+          "note": {
+            "de": "Gut für Einsteiger; Tempo steuern Action, Ruhepunkte und Story.",
+            "en": "Good for beginners; pacing comes from action, rest points and story."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Vergleich mit Open World: Umfang, Freiheit, Tempo, Erkundung",
+            "en": "Compare with open world: scope, freedom, pacing, exploration"
+          },
+          "note": {
+            "de": "Linear: kleiner Bereich, Designer bestimmt Tempo. Open World: großer Raum, Spieler bestimmt Tempo.",
+            "en": "Linear: small area, designer sets the pace. Open world: big space, player sets the pace."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Was macht ein Level spaßig? Diskutieren",
+            "en": "What makes a level fun? Discuss"
+          },
+          "note": {
+            "de": "Fokussiertes Erlebnis, Immersion, klare Ziele, Herausforderung mit Fortschritt.",
+            "en": "Focused experience, immersion, clear goals, challenge with progression."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "\"Level\" statt \"Ebene\" sagen; \"Leveldesign\" auf der Seite = Level Design",
+            "en": "Say \"Level\", not the literal German \"Ebene\"; the site's \"Leveldesign\" = Level Design"
+          },
+          "note": {
+            "de": "Die deutsche Seite schreibt \"Levelgestaltung\", \"Leveldesign\" und \"Ebene\".",
+            "en": "The German site writes \"Levelgestaltung\", \"Leveldesign\" and \"Ebene\"."
+          }
+        }
+      ]
+    },
+    {
+      "id": "2.6",
+      "type": "task",
+      "title": { "de": "Einen Startort erstellen", "en": "Creating a Starting Location" },
+      "minutes": 50,
+      "slide": 20,
+      "anchor": { "de": "#h.nvhqfn7zo8ky", "en": "#h.nvhqfn7zo8ky" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: Startort des Levels mit fertigen Modellen bauen, passend zum eigenen Thema",
+            "en": "Task: build the level's start area from ready-made models, matching your theme"
+          },
+          "note": {
+            "de": "Das Mini-Projekt ist der Anfang des Abschlussprojekts. Heute nur der Startort, neue Orte kommen in den nächsten Sessions.",
+            "en": "This mini project is the start of the final project. Only the start area today, new locations come in later sessions."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Groß genug zum Laufen, Rennen, Springen (Raum, Höhle, Schiff, Wald)",
+            "en": "Big enough to walk, run and jump (room, cave, ship, forest)"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Nur eine Seite offen (Korridor, Pfad, Tür, Straße), damit klar ist, wohin",
+            "en": "Open on one side only (corridor, path, door, street) so it's clear where to go"
+          },
+          "note": {
+            "de": "\"Korridor\" heißt jedes lineare, begrenzte Stück, auch ein Waldweg.",
+            "en": "\"Corridor\" means any linear, confined segment, including a forest path."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Controller nicht skalieren, sonst passt die Level-Logik nicht",
+            "en": "Do not scale the controller, or level logic breaks"
+          },
+          "note": {
+            "de": "Quelle sagt \"das Game Object\"; gemeint ist der Controller / Player.",
+            "en": "The source says \"the game object\"; it means the controller / player."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Geschlossene Ränder: Klippen, Mauern, Berge oder Wasser, kein Blick nach draußen",
+            "en": "Closed borders: cliffs, walls, mountains or water, no view to the outside"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Vorher Beispielbilder für Startorte zeigen, dann ca. 50 Min Arbeitszeit",
+            "en": "Show example start areas first, then about 50 min of work time"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Jedes Teen mindestens einmal ansprechen: erstes Projekt, Richtung prüfen",
+            "en": "Talk to every Teen at least once: first project, check direction"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2.7",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap Up" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.mj59lm5j1jut", "en": "#h.mj59lm5j1jut" },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "VOR der Session: Classroom-Aufgabe anlegen und Controller-Paket hochladen",
+            "en": "BEFORE the session: create the Classroom assignment and upload the controller package"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: Projekt speichern mit CMD+S (File, Save)",
+            "en": "About 10 min before the end: save the project with CMD+S (File, Save)"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Export: Assets-Ordner rechtsklicken, Export Package, alles angehakt, Export",
+            "en": "Export: right-click the Assets folder, Export Package, all ticked, Export"
+          },
+          "note": {
+            "de": "Name z. B. Tag2_Vorname_Nachname, Speicherort Desktop. Die deutsche Seite sagt \"Paket exportieren\".",
+            "en": "Name e.g. Day2_First_Last, location Desktop. Editor menu items are English."
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Paketdatei und 2-3 Screenshots in Classroom hochladen",
+            "en": "Upload the package file and 2-3 screenshots to Classroom"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Grünes Häkchen an der hochgeladenen Datei bei jedem prüfen",
+            "en": "Check the green tick on every uploaded file"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

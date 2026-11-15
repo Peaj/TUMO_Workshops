@@ -1,0 +1,285 @@
+{
+  "id": 5,
+  "title": { "de": "Navigation", "en": "Navigation" },
+  "tumoTitle": { "de": "Level-Navigation", "en": "Level Navigation" },
+  "takeaway": {
+    "de": "Die Teens kennen Landmarks, Vantage Points und Visual Language und haben damit ihr Level so verfeinert, dass es den Spieler führt, ohne ihn zu zwingen.",
+    "en": "Teens know landmarks, vantage points and visual language and have used them to refine their level so it guides the player without forcing them."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1kn2W-y2aoc62TUNGdXKdR2GBth9oHidk2oSvljcJJGc",
+    "en": "https://docs.google.com/presentation/d/125mmNjHfxpN5O6w9zuMDOGVlZe0awkagYh26P1gOZPo"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-5",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-5"
+  },
+  "sections": [
+    {
+      "id": "5.1",
+      "type": "review",
+      "title": { "de": "Rückblick", "en": "Review" },
+      "minutes": 15,
+      "slide": null,
+      "anchor": { "de": "#h.qgd8ufbt53m7", "en": "#h.qgd8ufbt53m7" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Einige Projekte aus Session 4 am Beamer öffnen und Feedback geben",
+            "en": "Open a few Session 4 projects on the projector and give feedback"
+          },
+          "note": {
+            "de": "Immer positiv und ermutigend: erst was gut ist, dann was besser geht.",
+            "en": "Always positive and encouraging: what works first, then what could improve."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Werkzeuge aus der letzten Session aufgreifen: wie hätten sie das Projekt verbessert?",
+            "en": "Revisit last session's tools: how could they have improved that project?"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Offene Fragen zu Session 4 beantworten",
+            "en": "Answer open questions about Session 4"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle laden ihre Unity-Datei aus Classroom, öffnen sie im Hub und dann die Main Scene",
+            "en": "Everyone downloads their Unity file from Classroom, opens it in the Hub, then the main Scene"
+          },
+          "note": {
+            "de": "Ablauf: Unity Hub, Projekt öffnen, im Project den Assets-Ordner, Main Scene doppelklicken. Auf den Screens prüfen, dass sie wirklich offen ist.",
+            "en": "Flow: Unity Hub, open project, Assets folder in Project, double-click the main Scene. Check on screens that it really is open."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Ankündigen: heute lernen wir Gestaltungsprinzipien für Navigation",
+            "en": "Announce: today we learn design principles for navigation"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Show Teens how to mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5.2",
+      "type": "presentation",
+      "title": { "de": "Navigation in Spielen", "en": "Navigation in Games" },
+      "minutes": 25,
+      "slide": 4,
+      "anchor": { "de": "#h.2v9jzb7myroi", "en": "#h.2v9jzb7myroi" },
+      "items": [
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Wie führt ein Spiel den Spieler? Welche Hinweise habt ihr bemerkt?",
+            "en": "How does a game guide the player? Which cues have you noticed?"
+          },
+          "note": {
+            "de": "Ziel der Diskussion: Level Designer streuen Hinweise, die den Spieler unbewusst führen.",
+            "en": "Aim of the discussion: level designers scatter hints that guide players subconsciously."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Zwei Gruppen von Navigation: UI (Karte, Waypoints) und Wayfinding Signs in der Umgebung",
+            "en": "Two groups of navigation: UI (map, waypoints) and wayfinding signs in the environment"
+          },
+          "note": {
+            "de": "Heute geht es um die zweite Gruppe. Die deutsche Folie sagt \"Wegweiser\".",
+            "en": "Today is about the second group. The German slides say \"Wegweiser\"."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Alles im Level kann Wayfinding sein: Geometrie, Props, Decals, Licht, Figuren, Sound, Effekte",
+            "en": "Anything in the level can be wayfinding: geometry, props, decals, lighting, characters, sound, effects"
+          },
+          "note": {
+            "de": "Sie sollen Aufmerksamkeit wecken, leiten und beim Orientieren helfen, ganz ohne Karte.",
+            "en": "They should grab attention, guide and help orientation, no map needed."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Landmark: ortsfestes Objekt, aus der Ferne sichtbar (Turm, Statue, Berg, Wasserfall)",
+            "en": "Landmark: stationary object visible from afar (tower, statue, mountain, waterfall)"
+          },
+          "note": {
+            "de": "Funktionen: zieht Blick an, hilft bei der Standortbestimmung, bleibt im Gedächtnis, schafft Gefühl von Reise. Die Folie wechselt zwischen Orientierungspunkt, Landmarke, Wahrzeichen und \"Meilenstein\": immer Landmark sagen.",
+            "en": "Functions: draws the eye, shows where you are, memorable, creates a sense of journey. The German slides switch between Orientierungspunkt, Landmarke, Wahrzeichen and \"Meilenstein\": always say Landmark."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Landmark-Beispiele zeigen: Elden Ring, Uncharted 4, The Last of Us",
+            "en": "Show landmark examples: Elden Ring, Uncharted 4, The Last of Us"
+          },
+          "note": {
+            "de": "Elden Ring: mehrere Landmarks von Anfang an sichtbar, man wählt das erste Ziel. Uncharted: großes Gebäude in Ruinen als klares Endziel. TLoU: jedes Level zeigt zu Beginn das Ziel.",
+            "en": "Elden Ring: several landmarks visible from the start, you pick the first goal. Uncharted: big building in the ruins as a clear final goal. TLoU: each level shows its goal at the start."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Vantage Point: erhöhter Standpunkt mit Blick auf Landmark und Startweg",
+            "en": "Vantage point: elevated spot with a view of the landmark and the starting path"
+          },
+          "note": {
+            "de": "Beispiel Assassin's Creed: Türme als Überblick. Die deutsche Folie sagt \"Aussichtspunkt\" und \"Ebene\".",
+            "en": "Example Assassin's Creed: towers for an overview. The German slides say \"Aussichtspunkt\" and \"Ebene\"."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Panorama wirkt durch Kontrast: erst eintönig, dann plötzlich weite Aussicht",
+            "en": "A panorama works through contrast: dull first, then suddenly a wide view"
+          },
+          "note": {
+            "de": "Der Weg dorthin führt oft durch Höhle, Tunnel oder Gebäude. Meist liegt ein Landmark im Panorama.",
+            "en": "The way there often leads through a cave, tunnel or building. A landmark usually sits in the panorama."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Visual Language: gleiches Aussehen bedeutet gleiche Funktion im Spiel",
+            "en": "Visual language: same look means same function in the game"
+          },
+          "note": {
+            "de": "Beispiele: Asphaltflecken zeigen den Weg; Far Cry 5: blaues Seil = kletterbar; Mirror's Edge: Rot = interaktiv; roter Behälter = explodiert. Die deutsche Seite schreibt mal \"visuelle Sprache\", mal \"Bildsprache\".",
+            "en": "Examples: asphalt patches mark the way; Far Cry 5: blue rope = climbable; Mirror's Edge: red = interactive; red barrel = explodes. The German site alternates between \"visuelle Sprache\" and \"Bildsprache\"."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Konsistenz betonen: gelb für Interaktives, das nicht immer gleich reagiert, verwirrt",
+            "en": "Stress consistency: yellow for interactables that react differently confuses players"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5.3",
+      "type": "task",
+      "title": { "de": "Navigationsprinzipien anwenden", "en": "Applying Navigation Principles" },
+      "minutes": 70,
+      "slide": null,
+      "anchor": { "de": "#h.fw9nglxiz2u4", "en": "#h.fw9nglxiz2u4" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: das eigene Level mit Landmarks und einheitlicher Visual Language verfeinern",
+            "en": "Task: refine your own level with landmarks and a consistent visual language"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Navigation geht groß und klein: große Objekte und Details",
+            "en": "Navigation works big and small: large objects and details"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Navigation muss durchs ganze Level führen, nicht nur an einzelnen Stellen",
+            "en": "Navigation must lead through the whole level, not just parts of it"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Führen, nicht zwingen: der Spieler soll sich selbst entscheiden fühlen",
+            "en": "Guide, do not force: the player should feel they decide"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Auch in schon gebauten Teilen anwenden, nicht nur in neuen",
+            "en": "Apply it to parts already built, not only to new ones"
+          },
+          "note": {
+            "de": "Tipp: Vantage Point nahe am Start mit Blick auf einen Landmark. Visual Language von Anfang an festlegen und durchhalten.",
+            "en": "Tip: a vantage point near the start with a view of a landmark. Set the visual language from the start and keep it."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: gibt es einen sichtbaren Landmark und bleibt die Visual Language gleich?",
+            "en": "Walk around: is there a visible landmark and does the visual language stay consistent?"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Ansagen: das ist die letzte Session an diesem Level, nächstes Mal kommt ein neuer Ort",
+            "en": "Announce: last session on this level, next time brings a new location"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5.4",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap Up" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.jc2t5sr9z23u", "en": "#h.jc2t5sr9z23u" },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Aufgabe in Classroom schon VOR der Session anlegen",
+            "en": "Create the Classroom assignment BEFORE the session"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: Teens speichern ihr Projekt und laden es in Classroom hoch",
+            "en": "About 10 min before the end: Teens save their project and upload it to Classroom"
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Projektdatei plus 2-3 Screenshots der Arbeit hochladen",
+            "en": "Upload the project file plus 2-3 screenshots of the work"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

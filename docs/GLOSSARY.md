@@ -26,6 +26,39 @@ Werkzeuge), wird genau so geschrieben wie im Editor.
 | Vertex Snap     | Scheitelpunkt-Werkzeug  | Vertex Snap      |
 | Command (key)   | Befehl                  | CMD              |
 | Instance        | Klon                    | Instanz          |
+| Hierarchy       | Hierarchie              | Hierarchy        |
+| Inspector       | Inspektor               | Inspector        |
+| Project         | Projektfenster          | Project          |
+| Scene           | Szene                   | Scene            |
+| GameObject      | Spielobjekt             | GameObject       |
+| Cube            | Würfel                  | Cube             |
+| Move / Rotate / Scale | Verschieben / Drehen / Skalieren | Move / Rotate / Scale |
+| Transform       | Transformationskomponente, Koordinatensystem | Transform |
+| Pivot           | Drehpunkt               | Pivot            |
+| Game Designer   | Spieldesigner, Spieleautor | Game Designer |
+| Developer       | Entwickler              | Developer        |
+| Artist          | Künstler                | Artist           |
+| Level Design    | Spiel-Level-Design      | Level Design     |
+| students        | Teilnehmer:innen        | Teens            |
+| Character / Camera / Controls | Charakter / Kamera / Steuerung | Character / Camera / Controls |
+| Prefab          | Fertigteile, Voreinstellungsordner | Prefab |
+| Export Package  | Paket exportieren       | Export Package   |
+| Terrain         | Gelände, Geländewerkzeug | Terrain         |
+| Environment     | Umwelt                  | Environment      |
+| Review          | Überblick, Nachbereitung | Rückblick       |
+| Landmark        | Landmarke, Wahrzeichen, Sehenswürdigkeit, Meilenstein | Landmark |
+| Vantage Point   | Aussichtspunkt          | Vantage Point    |
+| Trigger         | Auslöser                | Trigger          |
+| Capsule Collider | Kapsel Collider        | Capsule Collider |
+| Play Mode       | Spielmodus              | Play Mode        |
+| Checkpoint      | Kontrollpunkt           | Checkpoint       |
+| Directional Light | Gerichtetes Licht     | Directional Light |
+| Point Light     | Punktlicht              | Point Light      |
+| Spot Light      | Scheinwerfer            | Spot Light       |
+| Intensity / Range / Spot Angle | Intensität / Reichweite / Spot-Winkel | Intensity / Range / Spot Angle |
+| Skybox          | Himmelskastenbild       | Skybox           |
+
+Die TUMO-Macs haben macOS: nur Mac-Tastenkürzel nennen (CMD, nicht Strg).
 
 ## Weitere Begriffe, die englisch bleiben
 

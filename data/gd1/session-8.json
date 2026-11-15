@@ -1,0 +1,180 @@
+{
+  "id": 8,
+  "title": { "de": "Finale", "en": "Finale" },
+  "tumoTitle": { "de": "Abschluss", "en": "Finalization" },
+  "takeaway": {
+    "de": "Die Teens haben ihr Level fertiggestellt, mit Screen Recording abgegeben und im Show and Tell vorgestellt.",
+    "en": "Teens have finished their level, submitted it with a screen recording and presented it at Show and Tell."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/17cK4Q_2A1TWBLCc9TPKwQkK5Jvic0nZE49kcWmk4eC4",
+    "en": "https://docs.google.com/presentation/d/10_VLcVAbFcxOLrN3eP1OHgRFraHKGKgTPyn1HvXS9Pk"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-8",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-8"
+  },
+  "sections": [
+    {
+      "id": "8.1",
+      "type": "task",
+      "title": { "de": "Projekt fertigstellen", "en": "Project Finalization" },
+      "minutes": 60,
+      "slide": null,
+      "anchor": { "de": "#h.cdeawxhw86wr", "en": "#h.cdeawxhw86wr" },
+      "items": [
+        {
+          "kind": "info",
+          "text": {
+            "de": "Ansagen: Heute wird das eigene Projekt fertig gemacht",
+            "en": "Announce: today is for finishing your own project"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Kurz an die gelernten Prinzipien erinnern, Folie dazu stehen lassen",
+            "en": "Briefly recall the principles learned, leave that slide up"
+          },
+          "note": {
+            "de": "Die Teens sollen darauf nachschauen können.",
+            "en": "Teens should be able to look things up there."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: ganzes Level durchspielen, Probleme selbst beheben",
+            "en": "Task: playtest the whole level, fix any problems"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: Teens bei Problemen unterstützen",
+            "en": "Walk around: help Teens with their problems"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Show Teens how to mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "8.2",
+      "type": "task",
+      "title": { "de": "Hochladen in Classroom und TUMO-Pfad", "en": "Uploading to Classroom and TUMO Path" },
+      "minutes": 30,
+      "slide": null,
+      "anchor": { "de": "#h.bxf9m1w2tox2", "en": "#h.bxf9m1w2tox2" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Noch einmal: Projekt speichern, exportieren, in Google Classroom hochladen",
+            "en": "Once more: save, export and upload the project to Google Classroom"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Zwei Dateien nötig: .unitypackage und Bildschirmaufnahme (.mov)",
+            "en": "Two files required: .unitypackage and a screen recording (.mov)"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Aufnahme mit dem QuickTime Player zeigen, ca. 1-1,5 Min. Gameplay",
+            "en": "Show recording with QuickTime Player, about 1-1.5 min of gameplay"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Beide Dateien in den TUMO-Pfad hochladen zeigen",
+            "en": "Show how to upload both files to the TUMO path"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Prüfen, dass alle Teens beide Dateien hochgeladen hat",
+            "en": "Check that every Teen has uploaded both files"
+          },
+          "note": {
+            "de": "Das Show and Tell startet erst, wenn alle fertig sind.",
+            "en": "Show and Tell starts only once everyone is done."
+          }
+        }
+      ]
+    },
+    {
+      "id": "8.3",
+      "type": "other",
+      "title": { "de": "Show and Tell", "en": "Show and Tell" },
+      "minutes": 30,
+      "slide": null,
+      "anchor": { "de": "#h.9j1uy39qr7uc", "en": "#h.9j1uy39qr7uc" },
+      "items": [
+        {
+          "kind": "info",
+          "text": {
+            "de": "Einstieg: erst wenn alle hochgeladen haben, die gemeinsame Reise feiern",
+            "en": "Kick-off: once everyone has uploaded, celebrate the journey together"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Bildschirm teilen, TUMO 360 öffnen, Projekte nacheinander starten",
+            "en": "Share screen, open TUMO 360, open the projects one by one"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Teen kommt nach vorne: kurz vorstellen, Kommentare zum Projekt",
+            "en": "Teen comes to the front: short intro, comments on the project"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Fragen: Inspiration? Was war am schwierigsten, wie gelöst? Lieblingsthema?",
+            "en": "Ask: inspiration? Hardest part and how solved? Favourite topic?"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Zu wenig Zeit: Gruppen à 2-3, spielen gegenseitig ihre Spiele (Peer Review)",
+            "en": "Too little time: groups of 2-3 play each other's games (peer review)"
+          },
+          "note": {
+            "de": "Am besten Teens, die nebeneinander sitzen.",
+            "en": "Ideally Teens seated next to each other."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Fragen und Feedback der Teens einsammeln, nur positives Feedback zulassen",
+            "en": "Collect questions and feedback from Teens, keep all feedback positive"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

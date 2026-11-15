@@ -1,0 +1,294 @@
+{
+  "id": 4,
+  "title": { "de": "Level-Design-Prinzipien", "en": "Level Design Principles" },
+  "tumoTitle": {
+    "de": "Prinzipien der Levelgestaltung",
+    "en": "Level Design Principles"
+  },
+  "takeaway": {
+    "de": "Die Teens kennen vier Prinzipien, die ein Level interessant machen (Logik, Kontrastwechsel, Wechsel der Aktivität, Vertikalität), und haben mindestens 3-4 Bereiche ihres Levels damit gestaltet.",
+    "en": "Teens know four principles that make a level interesting (logic, contrast change, change of activity, verticality) and have applied them to at least 3-4 areas of their level."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1ven-TdRt-9ZYR9v2gsFMKItIiSJzpbjHF1Xb_Donotk",
+    "en": "https://docs.google.com/presentation/d/1ganWnkHRtifhQO8FFTL9ah9ANpp95htUuRmLs3XU-ac"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-4",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-4"
+  },
+  "sections": [
+    {
+      "id": "4.1",
+      "type": "review",
+      "title": { "de": "Rückblick", "en": "Review" },
+      "minutes": 15,
+      "slide": null,
+      "anchor": { "de": "#h.zicjy7mrloz6", "en": "#h.zicjy7mrloz6" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Einige Projekte aus Session 3 öffnen und Feedback geben",
+            "en": "Open a few projects from session 3 and give feedback"
+          },
+          "note": {
+            "de": "Erst Gutes nennen, dann Verbesserungen. Immer positiv und ermutigend.",
+            "en": "Name what works first, then improvements. Always positive and encouraging."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Werkzeuge aus der letzten Session wiederholen, an den Projekten gezeigt",
+            "en": "Recap last session's tools, shown on the projects"
+          },
+          "note": {
+            "de": "Zeigen, wie sie das jeweilige Projekt verbessern könnten.",
+            "en": "Show how each tool could improve the project at hand."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Offene Fragen der Teens beantworten",
+            "en": "Answer open questions from the Teens"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle öffnen ihr Projekt: Unity Hub, neues Projekt, Datei aus Classroom laden",
+            "en": "Everyone opens their project: Unity Hub, new project, download the file from Classroom"
+          },
+          "note": {
+            "de": "Im Project-Fenster Assets anklicken, Main Scene doppelklicken.",
+            "en": "In the Project window click Assets, double-click the main Scene."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Ausblick: Prinzipien, die das Gameplay des Levels verbessern",
+            "en": "Preview: principles that improve the level's gameplay"
+          },
+          "note": {
+            "de": "Mit ihnen wird das Level abwechslungsreicher und für Spieler interessanter.",
+            "en": "They make the level more varied and more interesting to players."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Show Teens how to mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4.2",
+      "type": "presentation",
+      "title": { "de": "Ein Level interessant gestalten", "en": "Making a Game Level Interesting" },
+      "minutes": 25,
+      "slide": 4,
+      "anchor": { "de": "#h.ynr5i0xodbre", "en": "#h.ynr5i0xodbre" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Logik und gesunder Menschenverstand: auch Fantasy folgt realer Logik",
+            "en": "Logic and common sense: even fantasy follows real-world logic"
+          },
+          "note": {
+            "de": "Schwebende Insel braucht eine Erklärung (BioShock Infinite: Technik; Fantasy: Magie mit sichtbaren Effekten). Folien 4-5.",
+            "en": "A floating island needs a reason (BioShock Infinite: technology; fantasy: magic with visible effects). Slides 4-5."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Funktion reicht nicht, es muss auch stimmig sein",
+            "en": "Function is not enough, it must also feel right"
+          },
+          "note": {
+            "de": "Witcher 3, Novigrad: schiefes Haus mit Stützen, Möbel mit untergelegten Teilen. Kleinigkeiten zählen: große Kiste in Raum mit kleiner Tür weckt Skepsis.",
+            "en": "Witcher 3, Novigrad: a leaning house with supports, furniture propped up. Details count: a big crate in a room with a small door breeds doubt."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Kontrastwechsel: plötzlicher Bruch in Umgebung, Geometrie oder Inhalt",
+            "en": "Contrast change: a sudden break in environment, geometry or content"
+          },
+          "note": {
+            "de": "Warme Wüste zu kalter Landschaft per Portal; langer Dungeon endet auf weiter Wiese; Ruinen mitten im leeren Wald. Folien 6-7.",
+            "en": "Warm desert to cold landscape via portal; long dungeon ends in a wide meadow; ruins in an empty forest. Slides 6-7."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Der Kontrast wirkt nur, wenn er abrupt und unerwartet kommt",
+            "en": "Contrast only works if it is abrupt and unexpected"
+          },
+          "note": {
+            "de": "Auch helle oder dunkle Bereiche ziehen die Aufmerksamkeit auf sich.",
+            "en": "Bright or dark areas also draw attention."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Frage: Wie spannend ist es, lange dasselbe zu tun?",
+            "en": "Ask: How engaging is it to do the same thing for a long time?"
+          },
+          "note": {
+            "de": "Auf Langeweile hinführen. Dann: Wechsel der Aktivität, schon Gehen, Rennen, Klettern reicht. Folie 8.",
+            "en": "Steer towards boredom. Then: change of activity, even walk, run, climb is enough. Slide 8."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Hindernisse erzwingen Springen oder Klettern, nach 20-30 Sek. wieder wechseln",
+            "en": "Obstacles force jumping or climbing, switch again after 20-30 s"
+          },
+          "note": {
+            "de": "Hindernisse und Alternativrouten strukturieren ein lineares Level und lassen die Spieler den besten Weg suchen.",
+            "en": "Obstacles and alternate routes structure a linear level and make players find the best path."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Vertikalität: den 3D-Raum nach oben und unten nutzen",
+            "en": "Verticality: use 3D space upwards and downwards"
+          },
+          "note": {
+            "de": "Assassin's Creed: Dächer, Klippen, Dungeons. Mirror's Edge: Wände und Schienen. Folie 9. Auch flache Abschnitte brauchen etwas Höhe, z. B. Rennstrecke mit Auf und Ab.",
+            "en": "Assassin's Creed: rooftops, cliffs, dungeons. Mirror's Edge: walls and rails. Slide 9. Even flat sections need some height, e.g. a race track with rises and dips."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Immer \"Level\" sagen, nie \"Ebene\"",
+            "en": "Always say \"Level\", never the literal German \"Ebene\""
+          },
+          "note": {
+            "de": "Die deutsche Seite schreibt \"Ebene\" für Level.",
+            "en": "The German site writes \"Ebene\" for level."
+          }
+        }
+      ]
+    },
+    {
+      "id": "4.3",
+      "type": "task",
+      "title": { "de": "Environment weiterentwickeln", "en": "Developing the Environment" },
+      "minutes": 70,
+      "slide": null,
+      "anchor": { "de": "#h.pvinu4oo9bhv", "en": "#h.pvinu4oo9bhv" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: am eigenen Level weiterbauen und die neuen Prinzipien anwenden",
+            "en": "Task: keep building your level and apply the new principles"
+          },
+          "note": {
+            "de": "Gilt auch für schon gebaute Teile: flacher Boden wird mit Steigungen und Gefälle oder Gebäuden mit mehreren Wegen vertikal.",
+            "en": "Also applies to existing parts: a flat floor becomes vertical with inclines, declines or buildings with multiple paths."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Neue Orte passend zum gewählten Thema bauen",
+            "en": "Build new locations that fit the chosen theme"
+          },
+          "note": {
+            "de": "Z. B. Tunnel, Höhle, Wald, Oase.",
+            "en": "E.g. tunnel, cave, forest, oasis."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Nicht die ganze Zeit in den Startbereich stecken, neue Orte bauen",
+            "en": "Do not spend all the time on the start area, build new places"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Kontrastwechsel gezielt einbauen, das macht das Level interessanter",
+            "en": "Build in contrast change on purpose, it makes the level more interesting"
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Ziel: mindestens 3-4 Bereiche, die die Prinzipien nutzen",
+            "en": "Goal: at least 3-4 areas that use the principles"
+          },
+          "note": {
+            "de": "Mehrere Prinzipien dürfen im selben Bereich stecken.",
+            "en": "Several principles may be used in the same area."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: Bereiche zählen, Logik prüfen, fragen welches Prinzip wo steckt",
+            "en": "Walk around: count areas, check logic, ask which principle is where"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4.4",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap Up" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.muya8mdzwt0b", "en": "#h.muya8mdzwt0b" },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Aufgabe in Classroom schon VOR der Session anlegen",
+            "en": "Create the Classroom assignment BEFORE the session"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: Projekt speichern und in Classroom hochladen",
+            "en": "About 10 min before the end: save the project and upload it to Classroom"
+          },
+          "note": {
+            "de": "Speichern bei Bedarf noch einmal zeigen (CMD+S).",
+            "en": "Show saving again if needed (CMD+S)."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Projektdatei plus 2-3 Screenshots der Arbeit hochladen",
+            "en": "Upload the project file plus 2-3 screenshots of the work"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

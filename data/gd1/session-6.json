@@ -1,0 +1,433 @@
+{
+  "id": 6,
+  "title": { "de": "Interaktive Objekte", "en": "Interactive Objects" },
+  "tumoTitle": {
+    "de": "Zusätzliche Grundsätze",
+    "en": "Additional Principles"
+  },
+  "takeaway": {
+    "de": "Die Teens lenken mit Forks, Natural Frames und Obstacles den Fokus, bauen Trigger und getaggte interaktive Objekte ein und starten einen neuen, glaubwürdigen Level-Standort.",
+    "en": "Teens guide player focus with forks, natural frames and obstacles, add triggers and tagged interactive objects, and start a new, believable level location."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1bWr8ktGbNOUGOphETsZZhpwkbRQ8nJYBBGihzHrpokU",
+    "en": "https://docs.google.com/presentation/d/15sLhPg3xc1rY6XxPEmRN-SS2BpkxdW14p1eDUjahY6c"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-6",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-6"
+  },
+  "sections": [
+    {
+      "id": "6.1",
+      "type": "review",
+      "title": { "de": "Rückblick", "en": "Review" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.c6zusivwaocp", "en": "#h.c6zusivwaocp" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Ein paar Projekte der letzten Session öffnen und Feedback geben",
+            "en": "Open a few projects from last session and give feedback"
+          },
+          "note": {
+            "de": "Immer positiv und ermutigend: erst, was gut ist, dann ein Verbesserungsvorschlag.",
+            "en": "Always positive and encouraging: what works first, then one suggestion."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Werkzeuge der letzten Session wieder aufgreifen, am Beispiel zeigen",
+            "en": "Revisit last session's tools and show how they would improve each project"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Offene Fragen der Teens beantworten",
+            "en": "Answer the Teens' open questions"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Unity Hub: neues Projekt öffnen, Datei der letzten Session laden und öffnen",
+            "en": "Unity Hub: open a new project, download and open last session's file"
+          },
+          "note": {
+            "de": "Im Project-Fenster Assets anklicken, Haupt-Scene suchen, Doppelklick.",
+            "en": "In the Project window click Assets, find the main scene, double-click."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Bei allen ist die Scene vom letzten Mal geöffnet",
+            "en": "Everyone has last time's scene open"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Show Teens how to mark their attendance"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Überblick\" statt Rückblick.",
+            "en": "The German site titles this \"Überblick\" (overview) instead of review."
+          }
+        }
+      ]
+    },
+    {
+      "id": "6.2",
+      "type": "presentation",
+      "title": { "de": "Weitere Level-Design-Prinzipien", "en": "More Level Design Principles" },
+      "minutes": 20,
+      "slide": 4,
+      "anchor": { "de": "#h.fugqhgdr5b1b", "en": "#h.fugqhgdr5b1b" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Aufmerksamkeit lenken: so übersieht niemand Wichtiges",
+            "en": "Steering attention: so nobody misses something important"
+          },
+          "note": {
+            "de": "Drei einfache Mittel: Forks, Natural Frame, Obstacles. Die deutsche Folie sagt \"Gabeln\", \"natürlicher Rahmen\", \"Hindernisse\".",
+            "en": "Three simple tools: forks, natural frame, obstacles. The German slides say \"Gabeln\", \"natürlicher Rahmen\", \"Hindernisse\"."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Fork: Die Mitte der Kreuzung zieht den Blick, hier Hinweise platzieren",
+            "en": "Fork: the middle of a crossroads draws the eye, put clues there"
+          },
+          "note": {
+            "de": "Der Spieler muss sich entscheiden und schaut zuerst in die Mitte. Beispiel: BioShock Infinite.",
+            "en": "The player must choose and checks the centre first. Example: BioShock Infinite."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Natural Frame: Objekte rahmen das Ziel, ohne aufzufallen",
+            "en": "Natural Frame: objects frame the goal without standing out"
+          },
+          "note": {
+            "de": "Tunnelausgang, Mauern, Bäume, Licht aus Fenstern. Beispiele: Uncharted, BioShock Infinite. Passt gut für Landmarks.",
+            "en": "Tunnel exit, walls, trees, window light. Examples: Uncharted, BioShock Infinite. Works well for landmarks."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Obstacles: Hindernisse formen Wege und machen das Ziel begehrter",
+            "en": "Obstacles: barriers shape paths and make the goal more desirable"
+          },
+          "note": {
+            "de": "Trick: Trümmer vor die Haupttür legen, Spieler sucht einen Umweg. Beispiel: BioShock Infinite.",
+            "en": "Trick: put rubble in front of the main door so players look for a detour. Example: BioShock Infinite."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Funktionalität: Form folgt Nutzung, auch bei Objekten außerhalb von Gebäuden",
+            "en": "Functionality: form follows use, also for objects other than buildings"
+          },
+          "note": {
+            "de": "Bauernhaus mit Garten und Heulager; Handelsstand auffällig und gut erkennbar; GTA-5-Laden mit Markise, Schildern, Parkmarkierungen.",
+            "en": "Farmhouse with garden and hay shed; trade stall eye-catching and easy to spot; GTA 5 store with awning, signs, parking markings."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Frage: Wer wohnt hier? Wozu dient das Gebäude? Wie sieht man das?",
+            "en": "Ask: Who lives here? What is the building for? How can you tell?"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Immer \"Level\" sagen, nie \"Ebene\"",
+            "en": "Always say \"Level\", never the literal German \"Ebene\""
+          },
+          "note": {
+            "de": "Die deutsche Seite schreibt \"Ebene\" und \"Spielebenen\", außerdem \"Spielmodus\" statt Play Mode.",
+            "en": "The German site writes \"Ebene\" and \"Spielebenen\", and \"Spielmodus\" instead of Play Mode."
+          }
+        }
+      ]
+    },
+    {
+      "id": "6.3",
+      "type": "presentation",
+      "title": { "de": "Interaktive Objekte", "en": "Interactive Objects" },
+      "minutes": 20,
+      "slide": 14,
+      "anchor": { "de": "#h.s5mqffl27edr", "en": "#h.s5mqffl27edr" },
+      "items": [
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Frage: Was könnte ein interaktives Objekt sein?",
+            "en": "Ask: What could an interactive object be?"
+          },
+          "note": {
+            "de": "Danach erklären: Spieler können damit etwas tun, es reagiert auf Input, ändert Spielstand, Story, Fähigkeiten oder Umgebung.",
+            "en": "Then explain: players can do something with it; it reacts to input and changes game state, story, abilities or environment."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Sie stecken schon in den Controller-Paketen aus Session 2",
+            "en": "They are already in the controller packages from Session 2"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Trigger: unsichtbarer Bereich, Interaktion beim Hineinlaufen",
+            "en": "Trigger: invisible area, interaction when the player walks in"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Auslöser\".",
+            "en": "The German site says \"Auslöser\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Per Bildschirm zeigen: Crawl Trigger, Wind, Elevator, Damager, Health Pack",
+            "en": "Show on screen: Crawl Trigger, Wind, Elevator, Damager, Health Pack"
+          },
+          "note": {
+            "de": "Crawl: Geheimgänge. Wind und Elevator: schnell nach oben, alternative Wege. Damager: Schaden, mehr Herausforderung. Health Pack: heilt, gleicht Schwierigkeit aus.",
+            "en": "Crawl: secret passages. Wind and Elevator: quick lift, alternative paths. Damager: harm, more challenge. Health Pack: heals, balances difficulty."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Weiter zeigen: Checkpoints, Coins, Treasure Chest, Win Object",
+            "en": "Continue: Checkpoints, Coins, Treasure Chest, Win Object"
+          },
+          "note": {
+            "de": "Checkpoint: nach dem Tod Neustart dort. Coins: Punkte, unbegrenzt. Chest: mit oder ohne Key wählbar. Win Object zeigt die nötige Punktzahl.",
+            "en": "Checkpoint: respawn there after death. Coins: points, no limit. Chest: with or without key, your choice. Win Object shows the score needed."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Ohne mindestens eine Treasure Chest ist das Spiel nicht gewinnbar",
+            "en": "Without at least one Treasure Chest the game cannot be won"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Zeigen: Teleports, Door, Deadly Zone, Guard NPC",
+            "en": "Show: Teleports, Door, Deadly Zone, Guard NPC"
+          },
+          "note": {
+            "de": "Deadly Zone: z. B. unten im Abgrund. Guard NPC: sieht der Wächter den Player, ist er gefangen; Umwege belohnen. Die deutsche Seite übersetzt fast alle Namen (Tödliche Zone, Wächter-NPC, Kontrollpunkte, Münzen, Heilpaket).",
+            "en": "Deadly Zone: e.g. at the bottom of a chasm. Guard NPC: if the guard sees the Player, they are caught; rewards detours. The German site translates nearly all names (Tödliche Zone, Wächter-NPC, Kontrollpunkte, Münzen, Heilpaket)."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Water und Climbing Objects sind keine Trigger, sondern laufen über Tags",
+            "en": "Water and Climbing Objects are not triggers, they work via tags"
+          },
+          "note": {
+            "de": "Jedes Objekt mit Tag \"Water\" verhält sich wie Wasser (Schwimmen), mit Climbing-Tag wie Kletterfläche. Die deutsche Seite sagt \"Kletternde Objekte\" und \"Wasser\".",
+            "en": "Any object tagged \"Water\" behaves like water (swimming), with the climbing tag like a climbable surface. The German site says \"Kletternde Objekte\" and \"Wasser\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Objekt ohne Collider einfügen: Player läuft durch",
+            "en": "Add an object without a Collider: the Player walks through"
+          },
+          "note": {
+            "de": "Collider geben Objekten physische Präsenz.",
+            "en": "Colliders give objects physical presence."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Box Collider im Inspector hinzufügen, im Play Mode testen",
+            "en": "Add a Box Collider in the Inspector, test in Play Mode"
+          },
+          "note": {
+            "de": "Die grünen Linien sind die Collider-Grenzen und lassen sich ziehen.",
+            "en": "The green lines are the collider bounds and can be stretched."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Collider-Typen: Box, Sphere, Capsule, Mesh",
+            "en": "Collider types: Box, Sphere, Capsule, Mesh"
+          },
+          "note": {
+            "de": "Box: eckig. Sphere: rund. Capsule: Figuren, aufrechte Zylinder. Mesh: kopiert die Form, für komplexe Objekte. Die deutsche Seite sagt \"Kapsel Collider\".",
+            "en": "Box: rectangular. Sphere: round. Capsule: characters, upright cylinders. Mesh: copies the shape, for complex objects. The German site says \"Kapsel Collider\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Objekte duplizieren und platzieren: einen Trigger und ein Tag-Objekt zeigen",
+            "en": "Duplicate and place objects: show one trigger and one tag object"
+          },
+          "note": {
+            "de": "Duplizieren mit CMD+D.",
+            "en": "Duplicate with CMD+D."
+          }
+        }
+      ]
+    },
+    {
+      "id": "6.4",
+      "type": "task",
+      "title": { "de": "Interaktive Objekte ins Level", "en": "Adding Interactive Objects to the Level" },
+      "minutes": 15,
+      "slide": null,
+      "anchor": { "de": "#h.y2e91qp6j507", "en": "#h.y2e91qp6j507" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: interaktive Objekte dort einbauen, wo es Sinn ergibt",
+            "en": "Task: add interactive objects where they make sense"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Mindestens 3 interaktive Objekte an verschiedenen Stellen",
+            "en": "At least 3 interactive objects in different places"
+          },
+          "note": {
+            "de": "Nicht alle Typen nötig. Ohne sie fühlt sich das Spiel kaum interaktiv an.",
+            "en": "Not every type is needed. Without them the game feels barely interactive."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Climbing Objects öfter einsetzen als andere",
+            "en": "Use Climbing Objects more often than the others"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: Collider vorhanden, Tags richtig, Objekte im Play Mode testen",
+            "en": "Walk around: colliders present, tags correct, objects tested in Play Mode"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6.5",
+      "type": "task",
+      "title": { "de": "Neuen Level-Standort bauen", "en": "Creating a New Level Location" },
+      "minutes": 45,
+      "slide": null,
+      "anchor": { "de": "#h.tmoencasol9q", "en": "#h.tmoencasol9q" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: neuen Standort fürs Level bauen, ein bewohnbares Gebiet",
+            "en": "Task: build a new location for the level, an inhabited area"
+          },
+          "note": {
+            "de": "Mit Infrastruktur wie Straßen, Häfen, Märkten. Die Seite sagt \"Level-Standort\", gemeint ist Location.",
+            "en": "With infrastructure such as roads, ports, markets. The German site says \"Level-Standort\", meaning location."
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Details und Props ergänzen: Straßenlaternen, Felsen, Fässer",
+            "en": "Add details and props: streetlights, rocks, barrels"
+          },
+          "note": {
+            "de": "Das gibt Realismus und Tiefe.",
+            "en": "This adds realism and depth."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeit ansagen: ca. 40 Minuten, in Session 7 geht es weiter",
+            "en": "Announce the time: about 40 minutes, work continues in Session 7"
+          },
+          "note": {
+            "de": "Auf der Seite stehen 40 Min, die Session hat hier 45 eingeplant.",
+            "en": "The site says 40 min; this plan gives the task 45."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: Funktionalität, Fokus (Fork, Frame, Obstacle) und Interaktives prüfen",
+            "en": "Walk around: check functionality, focus (fork, frame, obstacle) and interactives"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6.6",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap Up" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.igtn3s6u5sr4", "en": "#h.igtn3s6u5sr4" },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Aufgabe in Classroom schon VOR der Session anlegen",
+            "en": "Create the Classroom assignment BEFORE the session"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: Projekt speichern, Speichern bei Bedarf erinnern",
+            "en": "About 10 min before the end: save the project, remind how if needed"
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "Projektdatei und 2-3 Screenshots in Google Classroom hochladen",
+            "en": "Upload the project file and 2-3 screenshots to Google Classroom"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

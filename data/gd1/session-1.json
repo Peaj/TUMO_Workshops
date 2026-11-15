@@ -1,0 +1,488 @@
+{
+  "id": 1,
+  "title": { "de": "Erstes Level", "en": "First Level" },
+  "tumoTitle": {
+    "de": "Einführung in die Spielentwicklung und Videospiele",
+    "en": "Intro to Game Development and Video Games"
+  },
+  "takeaway": {
+    "de": "Die Teens wissen, was ein Spiel und ein Level ist, und haben in Unity ihr erstes lineares Level aus einfachen Formen gebaut.",
+    "en": "Teens know what a game and a level are and have built their first linear level from simple shapes in Unity."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1X5jiMgT3_mnlKwAb_zc8-WqCHXlQBBd8ZQ9-uZBXFT4",
+    "en": "https://docs.google.com/presentation/d/1ZwXhmbpE4GuO90rSB5nTFj_6kHDQqYhbR8qeQCRCIvI"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-1",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-1"
+  },
+  "sections": [
+    {
+      "id": "1.1",
+      "type": "other",
+      "title": { "de": "Begrüßung", "en": "Meet and Greet" },
+      "minutes": 15,
+      "slide": 3,
+      "anchor": { "de": "#h.jn7syxc6x37g", "en": "#h.jn7syxc6x37g" },
+      "items": [
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Jeder: Name, Lieblingsspiel und was daran besonders gefällt",
+            "en": "Everyone: name, favourite game and what makes it special"
+          },
+          "note": {
+            "de": "Alternativen: Warum dieser Workshop? Erster TUMO-Workshop? Habt ihr schon mal überlegt, wie ein Spiel entsteht?",
+            "en": "Alternatives: why this workshop? First TUMO workshop? Ever wondered how a game gets made?"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Ziel: eigenes Game Level mit einfacher Umgebung bauen",
+            "en": "Goal: build your own game level with a simple environment"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "8 Sessions à 2 h: Fehlen oder Zuspätkommen rächt sich",
+            "en": "8 sessions, 2 h each: absence or lateness is hard to make up"
+          },
+          "note": {
+            "de": "Jede Session baut auf der vorigen auf. Nicht vergessen zu sagen.",
+            "en": "Each session builds on the last. Easy to forget to say."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Zeigen, wie die Teens ihre Anwesenheit bestätigen",
+            "en": "Show Teens how to mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.2",
+      "type": "presentation",
+      "title": { "de": "Was ist ein Spiel?", "en": "What is a Game?" },
+      "minutes": 10,
+      "slide": 6,
+      "anchor": { "de": "#h.8bzigouniydb", "en": "#h.8bzigouniydb" },
+      "items": [
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Frage: Was ist ein Spiel? Alle einbeziehen",
+            "en": "Ask: What is a game? Involve everyone"
+          },
+          "note": {
+            "de": "Sid Meier: \"A game is a series of interesting choices.\" Es gibt keine falsche Antwort.",
+            "en": "Sid Meier: \"A game is a series of interesting choices.\" There is no wrong answer."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Ist der Kreativmodus in Minecraft / LEGO ein Spiel? Ein Puzzle?",
+            "en": "Is Minecraft creative mode / LEGO a game? A puzzle?"
+          },
+          "note": {
+            "de": "Grenzfälle, an denen sich die Definition reibt.",
+            "en": "Edge cases that stress-test the definition."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Drei Bausteine jedes Spiels: Ziel, Regeln, Konflikt",
+            "en": "Three building blocks of every game: goal, rules, conflict"
+          },
+          "note": {
+            "de": "Monopoly: Ziel = reichster Spieler; Regel = dreimal Pasch hintereinander, ab ins Gefängnis; Konflikt = Hindernisse und steigende Schwierigkeit.",
+            "en": "Monopoly: goal = richest player; rule = three doubles in a row, go to jail; conflict = obstacles and rising difficulty."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Videospiel: virtuelle Welt, Bildschirm, Controller, Bild und oft Ton",
+            "en": "Video game: virtual world, screen, controller, visuals and often sound"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Kennt ihr Audiospiele oder Brettspiele mit App?",
+            "en": "Know any audio games or board games with an app?"
+          },
+          "note": {
+            "de": "Audiospiele gibt es wirklich. Beispiel für App-Brettspiel: Hitster.",
+            "en": "Audio games really exist. App board game example: Hitster."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Kurz halten: Ziel ist, dass alle mitreden, nicht Tiefgang",
+            "en": "Keep it short: the point is everyone speaking up, not depth"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.3",
+      "type": "presentation",
+      "title": { "de": "Berufe in der Spieleentwicklung", "en": "Professions in Game Development" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.lhsehu42riii", "en": "#h.lhsehu42riii" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Spieleentwicklung ist Teamarbeit, oft 100+ Leute",
+            "en": "Game development is teamwork, often 100+ people"
+          },
+          "note": {
+            "de": "Burj Khalifa vs. GTA 6: Dauer 6 vs. 10-13 Jahre, Kosten 1,5 Mrd. vs. 1-2 Mrd., Arbeiter 12.000 vs. 6.000.",
+            "en": "Burj Khalifa vs. GTA 6: duration 6 vs. 10-13 years, cost 1.5 bn vs. 1-2 bn, workers 12,000 vs. 6,000."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Game Designer: erfindet Regeln und alles Spielgeschehen",
+            "en": "Game Designer: invents the rules and everything that happens"
+          },
+          "note": {
+            "de": "Drei Gruppen: Rules/Game Designer, Level Designer (bauen die Umgebung), Narrative Designer (Story).",
+            "en": "Three groups: rules/game designers, level designers (build the environment), narrative designers (story)."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Developer: Code macht die Regeln des Designers lebendig",
+            "en": "Developer: code brings the designer's rules to life"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Artist: alles Sichtbare, von 3D-Modellen bis zum Icon",
+            "en": "Artist: everything visible, from 3D models to the icon"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Englische Berufsnamen benutzen, die Branche sagt nichts anderes",
+            "en": "Use the English job titles, the industry uses no others"
+          },
+          "note": {
+            "de": "Die deutsche Seite schreibt Spieldesigner, Entwickler, Künstler und sogar \"Spieleautor\".",
+            "en": "The German site writes Spieldesigner, Entwickler, Künstler and even \"Spieleautor\"."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Dieser Workshop: Fokus auf Game Design, vor allem Level Design",
+            "en": "This workshop focuses on game design, especially level design"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.4",
+      "type": "presentation",
+      "title": { "de": "Level Design", "en": "Game Level Design" },
+      "minutes": 10,
+      "slide": 9,
+      "anchor": { "de": "#h.zgw4qvqjn8v0", "en": "#h.zgw4qvqjn8v0" },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Jedes Spiel spielt in einem Raum: das ist das Level",
+            "en": "Every game takes place in a space: that is the level"
+          },
+          "note": {
+            "de": "Tetris: geschlossenes flaches Feld. Mario: weite flache Landschaft mit Bäumen und Wolken.",
+            "en": "Tetris: a closed flat field. Mario: a wide flat landscape with trees and clouds."
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Frage: Wie sieht ein Level in eurem Lieblingsspiel aus?",
+            "en": "Ask: What does a level in your favourite game look like?"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Level Design = Level gestalten; auch Location oder Environment genannt",
+            "en": "Level design = designing levels; also called location or environment"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Level Designer bauen nicht nur Optik: Regeln, Schwierigkeit, Spielgefühl",
+            "en": "Level designers do more than looks: rules, difficulty, player experience"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Immer \"Level\" sagen, nie \"Ebene\" oder \"Spielebene\"",
+            "en": "Always say \"Level\", never the literal German \"Ebene\""
+          },
+          "note": {
+            "de": "Die deutsche Seite schreibt \"Spielebenen\" und \"Ebene\".",
+            "en": "The German site writes \"Spielebenen\" and \"Ebene\"."
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.5",
+      "type": "presentation",
+      "title": { "de": "Erste Schritte mit Unity", "en": "Getting Started with Unity" },
+      "minutes": 25,
+      "slide": 10,
+      "anchor": { "de": "#h.epozvuk07olw", "en": "#h.epozvuk07olw" },
+      "items": [
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Wer kennt Unity schon? Was habt ihr damit gemacht?",
+            "en": "Who knows Unity already? What did you do with it?"
+          },
+          "note": {
+            "de": "Unity ist die beliebteste Engine. Beispiele: Call of Duty: Mobile, Genshin Impact, Ori and the Blind Forest.",
+            "en": "Unity is the most popular engine. Examples: Call of Duty: Mobile, Genshin Impact, Ori and the Blind Forest."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Unity Hub: New, 3D-Template, Name_Session_1, Create; Teens machen mit",
+            "en": "Unity Hub: New, 3D template, Name_Session_1, Create; Teens follow along"
+          },
+          "note": {
+            "de": "Warten, bis bei allen das Projekt offen ist. Bezeichnung des Templates hängt von der Unity-Version ab.",
+            "en": "Wait until everyone has the project open. Template name depends on the Unity version."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Vier Fenster: Scene, Hierarchy, Inspector, Project",
+            "en": "Four windows: Scene, Hierarchy, Inspector, Project"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt Hierarchie, Inspektor, Projekt, Szene. Im Editor steht alles englisch.",
+            "en": "The German site says Hierarchie, Inspektor, Projekt, Szene. The editor is all English."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Scene-Navigation: bewegen, umschauen, Geschwindigkeit ändern",
+            "en": "Scene navigation: move, look around, change speed"
+          },
+          "note": {
+            "de": "Rechte Maustaste halten, dann WASD und Q/E; Shift = schneller; Mausrad ändert die Geschwindigkeit.",
+            "en": "Hold right mouse button, then WASD and Q/E; Shift = faster; mouse wheel changes the speed."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Cube anlegen (Hierarchy, Rechtsklick, 3D Object), dann Tools: W Move, E Rotate, R Scale",
+            "en": "Create a Cube (Hierarchy, right-click, 3D Object), then tools: W Move, E Rotate, R Scale"
+          },
+          "note": {
+            "de": "Die drei Pfeile bzw. Ringe sind die drei Achsen. Alle drei Tools braucht man später fürs Level.",
+            "en": "The three arrows/rings are the three axes. All three tools are needed for the level later."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Nur an Pfeilen und Ringen ziehen, nicht an Mittelquadraten oder grauer Kugel",
+            "en": "Drag only arrows and rings, not centre squares or the grey sphere"
+          },
+          "note": {
+            "de": "Sonst wird es zufällig. Beim Scale: Mittelwürfel skaliert gleichmäßig in alle Richtungen.",
+            "en": "Otherwise results are random. With Scale: the centre cube scales uniformly in all directions."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Transform im Inspector: Werte tippen; Duplizieren mit CMD+D",
+            "en": "Transform in the Inspector: type values; duplicate with CMD+D"
+          },
+          "note": {
+            "de": "Die deutsche Seite nennt das \"Koordinatensystem\" bzw. \"Transformationskomponente\": einfach Transform sagen.",
+            "en": "The German site calls this the \"coordinate system\" / transform component: just say Transform."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Vertex Snap: V halten, Ecke eines Objekts an Ecke des anderen ziehen",
+            "en": "Vertex Snap: hold V, drag a corner of one object onto another's corner"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Scheitelpunkt-Werkzeug\".",
+            "en": "The German site says \"Scheitelpunkt-Werkzeug\"."
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.6",
+      "type": "task",
+      "title": { "de": "Die erste Spielumgebung gestalten", "en": "Crafting Your First Game Environment" },
+      "minutes": 35,
+      "slide": 14,
+      "anchor": { "de": "#h.8x1qvs1v89sn", "en": "#h.8x1qvs1v89sn" },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: lineares Level bauen (Straße oder Korridor), nur ein Weg",
+            "en": "Task: build a linear level (street or corridor), only one path"
+          },
+          "note": {
+            "de": "Lineares Level: fester Pfad, wenig Freiheit, kontrolliertes Erlebnis. Beispiele zeigen.",
+            "en": "Linear level: fixed path, little freedom, controlled experience. Show examples."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Zuerst alles löschen, nur das Directional Light bleibt",
+            "en": "First delete everything, only the Directional Light stays"
+          },
+          "note": {
+            "de": "Alles markieren, CMD+Backspace.",
+            "en": "Select all, CMD+Backspace."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Level soll echte Logik haben: Straße mit Gehweg, Korridor mit Türen",
+            "en": "The level should follow real-life logic: street with sidewalk, corridor with doors"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Material: Project, Rechtsklick, Create, Material; Albedo-Farbe wählen; aufs Objekt ziehen",
+            "en": "Material: Project, right-click, Create, Material; pick Albedo colour; drag onto object"
+          },
+          "note": {
+            "de": "Je nach Render Pipeline heißt das Feld evtl. Base Map statt Albedo.",
+            "en": "Depending on the render pipeline the field may be called Base Map instead of Albedo."
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Farbe ist optional, nur wenn Zeit und Lust da sind",
+            "en": "Colour is optional, only if there is time and interest"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: gibt es wirklich nur einen Weg und ergibt das Level Sinn?",
+            "en": "Walk around: is there truly one path and does the level make sense?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.7",
+      "type": "presentation",
+      "title": { "de": "Einführung in Google Classroom", "en": "Introduction to Google Classroom" },
+      "minutes": 5,
+      "slide": null,
+      "anchor": { "de": "#h.ohkyr9una59", "en": "#h.ohkyr9una59" },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Google Classroom: anmelden, Classroom-Code eingeben, Kurs beitreten",
+            "en": "Google Classroom: sign in, enter the Classroom code, join the class"
+          },
+          "note": {
+            "de": "Der Kurs heißt \"Game Development Level I\"; die deutsche Seite nennt ihn \"Spielentwicklung Level I\".",
+            "en": "The class is \"Game Development Level I\"; the German site calls it \"Spielentwicklung Level I\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Aufgaben-Ankündigung finden und Abgabe hochladen zeigen",
+            "en": "Show how to find the assignment announcement and upload a submission"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Classroom-Code gut sichtbar anzeigen, bis alle drin sind",
+            "en": "Keep the Classroom code visible until everyone has joined"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1.8",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap Up" },
+      "minutes": 10,
+      "slide": null,
+      "anchor": { "de": "#h.h0vak0197dvl", "en": "#h.h0vak0197dvl" },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Aufgabe in Classroom schon VOR der Session anlegen",
+            "en": "Create the Classroom assignment BEFORE the session"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: Teens laden ihre Arbeit in Classroom hoch",
+            "en": "About 10 min before the end: Teens upload their work to Classroom"
+          }
+        },
+        {
+          "kind": "task",
+          "text": {
+            "de": "2-3 Screenshots der Scene aus verschiedenen Blickwinkeln hochladen",
+            "en": "Upload 2-3 screenshots of the scene from different angles"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}

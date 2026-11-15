@@ -1,0 +1,457 @@
+{
+  "id": 3,
+  "title": {
+    "de": "Raum und Terrain",
+    "en": "Space and Terrain"
+  },
+  "tumoTitle": {
+    "de": "Räumliches Vorstellungsvermögen in Spielen",
+    "en": "Spatial Awareness in Games"
+  },
+  "takeaway": {
+    "de": "Die Teens wissen, wie Raum Gefühle beim Spielen auslöst, und haben mit dem Terrain-Tool in Unity neue Locations für ihr Level gebaut.",
+    "en": "Teens know how space creates emotion in play and have used Unity's Terrain tool to build new locations for their level."
+  },
+  "slides": {
+    "de": "https://docs.google.com/presentation/d/1VgWskLwZZxAz7PHJzA_Rfn5WHHs3FXoYDOKq3jqooVM",
+    "en": "https://docs.google.com/presentation/d/1TDpoAWlMnCT6Xs7JLKFBFAoRroyab04PtKo9CapWJ9U"
+  },
+  "source": {
+    "de": "https://sites.google.com/tumo.org/game-development-level1-de/session-3",
+    "en": "https://sites.google.com/tumo.org/game-development-level1-eng/session-3"
+  },
+  "sections": [
+    {
+      "id": "3.1",
+      "type": "review",
+      "title": {
+        "de": "Rückblick",
+        "en": "Review"
+      },
+      "minutes": 10,
+      "slide": null,
+      "anchor": {
+        "de": "#h.qszqiukjvp3i",
+        "en": "#h.qszqiukjvp3i"
+      },
+      "items": [
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Einige Projekte aus Session 2 öffnen und Feedback geben",
+            "en": "Open a few projects from session 2 and give feedback"
+          },
+          "note": {
+            "de": "Immer positiv und ermutigend: erst, was gut ist, dann, was besser geht.",
+            "en": "Always positive and encouraging: what works first, then what could improve."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Tools der letzten Session aufgreifen: wie verbessern sie das Projekt?",
+            "en": "Revisit last session's tools: how would they improve the project?"
+          }
+        },
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Fragen der Teens beantworten",
+            "en": "Answer the Teens' questions"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Unity Hub: neues Projekt, Unity-Datei aus Session 2 herunterladen, öffnen",
+            "en": "Unity Hub: new project, download the Unity file from session 2, open it"
+          },
+          "note": {
+            "de": "Die Seite sagt nicht, welches Dateiformat. Vermutlich das exportierte Package aus Session 2.",
+            "en": "The site does not name the file format. Probably the package exported in session 2."
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Assets: Main Scene per Doppelklick öffnen, bei allen prüfen",
+            "en": "Assets: double-click the main Scene to open it, check everyone's screen"
+          }
+        },
+        {
+          "kind": "info",
+          "text": {
+            "de": "Anwesenheit bestätigen lassen",
+            "en": "Have Teens mark their attendance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "3.2",
+      "type": "presentation",
+      "title": {
+        "de": "Räumliche Emotionen",
+        "en": "Spatial Emotions"
+      },
+      "minutes": 20,
+      "slide": 4,
+      "anchor": {
+        "de": "#h.wyizz7meumye",
+        "en": "#h.wyizz7meumye"
+      },
+      "items": [
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Überleitung: Raum und Architektur lösen gezielt Gefühle aus",
+            "en": "Lead-in: space and architecture are crafted to evoke emotion"
+          },
+          "note": {
+            "de": "Nicht nur Funktion und Optik: Layout steuert das Erlebnis der Spieler.",
+            "en": "Not just function and looks: layout steers the player's experience."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Sicherheit: geschlossen, symmetrisch, weiche Kurven, gemütlich",
+            "en": "Security: enclosed, symmetrical, soft curves, cosy"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Gefahr: kantig, uneben, imposant, weite offene Fläche ohne Deckung",
+            "en": "Danger: sharp, uneven, imposing, big open space with no cover"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Klaustrophobie: eng, schmale Gänge, niedrige Decke, ein Ein-/Ausgang",
+            "en": "Claustrophobia: tight, narrow corridors, low ceilings, one way in/out"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Höhenangst: Vertikalität, weite Aussicht, offene Plattformen in der Höhe",
+            "en": "Fear of heights: verticality, wide views, open high platforms"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Erhabenheit/Ehrfurcht: gewaltige, majestätische Formen",
+            "en": "Grandeur/awe: huge, majestic forms"
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Mysterium/Neugier: verdeckte Gangenden, Muster, die zum Erkunden locken",
+            "en": "Mystery/curiosity: hidden corridor ends, patterns that invite exploring"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Beispiele zeigen, nur kurz besprechen; ein Element kann alles ändern",
+            "en": "Show examples, discuss briefly; one element can change everything"
+          },
+          "note": {
+            "de": "Folien 4-9. Die deutsche Seite sagt \"Spielebenen\" statt Levels.",
+            "en": "Slides 4-9. The German site says \"Spielebenen\" instead of levels."
+          }
+        }
+      ]
+    },
+    {
+      "id": "3.3",
+      "type": "presentation",
+      "title": {
+        "de": "Landschaften und Terrain",
+        "en": "Landscapes and Terrain"
+      },
+      "minutes": 20,
+      "slide": 11,
+      "anchor": {
+        "de": "#h.ndvkiyr0bg70",
+        "en": "#h.ndvkiyr0bg70"
+      },
+      "items": [
+        {
+          "kind": "ask",
+          "text": {
+            "de": "Frage: Was ist eine Landschaft? Welche Arten habt ihr schon gesehen?",
+            "en": "Ask: What is a landscape? Which kinds have you seen?"
+          },
+          "note": {
+            "de": "Ziel: Landschaft = alle sichtbaren Merkmale eines Landstrichs.",
+            "en": "Goal: landscape = all visible features of an area of land."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Landschaften in Spielen: mehrere Beispiele zeigen",
+            "en": "Landscapes in games: show several examples"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Terrain anlegen: Hierarchy, Rechtsklick, 3D Object, Terrain",
+            "en": "Create a Terrain: Hierarchy, right-click, 3D Object, Terrain"
+          },
+          "note": {
+            "de": "Teens haben schon ein Terrain in der Scene: nur anklicken, dann wird es umrandet.",
+            "en": "Teens already have a Terrain in the Scene: just click it to see the outline."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Terrain auswählen: Terrain-Toolbar erscheint im Inspector",
+            "en": "Select the Terrain: the Terrain toolbar appears in the Inspector"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Inspektor\", \"Hierarchiefenster\" und \"3D-Objekte\".",
+            "en": "The German site says \"Inspektor\", \"Hierarchiefenster\" and \"3D-Objekte\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Raise or Lower: Linksklick hebt, Shift + Linksklick senkt",
+            "en": "Raise or Lower: left-click raises, Shift + left-click lowers"
+          },
+          "note": {
+            "de": "Berge, Hügel, Canyons. Ein bis zwei Minuten Ausprobieren.",
+            "en": "Mountains, hills, canyons. One to two minutes to experiment."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Drei Einstellungen bei allen Brushes: Brush Type, Size, Opacity",
+            "en": "Three settings on every brush: Brush Type, Size, Opacity"
+          },
+          "note": {
+            "de": "Form, Größe, Intensität des Pinsels.",
+            "en": "Shape, size, intensity of the brush."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Set Height: Target Height einstellen, für Plateaus, Straßen, Stufen",
+            "en": "Set Height: set Target Height, for plateaus, roads, steps"
+          },
+          "note": {
+            "de": "Senkt Terrain über der Zielhöhe, hebt es darunter.",
+            "en": "Lowers terrain above the target height, raises it below."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Smooth Height: Terrain glätten und weicher machen",
+            "en": "Smooth Height: smooth and soften the terrain"
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Paint Textures: Textur in der Texture-Leiste wählen und malen",
+            "en": "Paint Textures: pick a texture in the texture bar and paint"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Nach jedem Tool kurz selbst ausprobieren lassen",
+            "en": "Let Teens try each tool right after the demo"
+          },
+          "note": {
+            "de": "Die deutsche Seite übersetzt die Tools (Anheben oder Absenken, Höhe festlegen/glätten, Texturen malen): im Editor heißt alles englisch.",
+            "en": "The German site translates the tools (Anheben oder Absenken, Höhe festlegen/glätten, Texturen malen): the editor is all English."
+          }
+        }
+      ]
+    },
+    {
+      "id": "3.4",
+      "type": "task",
+      "title": {
+        "de": "Umgebung entwickeln",
+        "en": "Developing the Environment"
+      },
+      "minutes": 60,
+      "slide": null,
+      "anchor": {
+        "de": "#h.43gk9c7cxdqg",
+        "en": "#h.43gk9c7cxdqg"
+      },
+      "items": [
+        {
+          "kind": "task",
+          "text": {
+            "de": "Aufgabe: Level weiterbauen, vom Startpunkt aus neue Locations bauen",
+            "en": "Task: keep building the level, add new locations beyond the starting area"
+          },
+          "note": {
+            "de": "Startpunkt aus Session 2. Fokus heute: neue Locations.",
+            "en": "Starting area from session 2. Focus today: new locations."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Level zuerst planen: grobe Skizze des fertigen Levels, kurz vormachen",
+            "en": "Plan first: rough outline of the finished level, demo it briefly"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Levelgrenzen dürfen nicht sichtbar sein: Berge, Wasser, Bäume, Felsen, Klippen",
+            "en": "Level borders must not be visible: mountains, water, trees, rocks, cliffs"
+          },
+          "note": {
+            "de": "So sehen die Spieler keinen leeren Raum.",
+            "en": "So players never see empty space."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Terrain maximal 215x215; mehr nur nach Absprache mit dir",
+            "en": "Terrain max 215x215; more only after asking you"
+          },
+          "note": {
+            "de": "Muss nicht quadratisch sein; Terrainbreite = nicht Levelgröße. Empfohlen: lineare, parallele Wege.",
+            "en": "Needn't be square; terrain width isn't level size. Recommended: linear parallel paths."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Erinnern: Terrain-Tools jederzeit nutzbar",
+            "en": "Remind: Terrain tools are available any time"
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Lücken müssen kürzer als die maximale Sprungweite sein",
+            "en": "Gaps must be shorter than the character's max jump distance"
+          },
+          "note": {
+            "de": "Spielbarer Bereich: Figur soll sich frei bewegen können.",
+            "en": "Playable area: the character must move freely."
+          }
+        },
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Objekte nicht so skalieren, dass Proportionen unrealistisch werden",
+            "en": "Don't scale objects into unrealistic proportions"
+          },
+          "note": {
+            "de": "Z.B. Tisch höher als Figur, riesige Treppen.",
+            "en": "E.g. table taller than the character, oversized stairs."
+          }
+        },
+        {
+          "kind": "explain",
+          "text": {
+            "de": "Vorher mehrere Landschaftsbeispiele zeigen",
+            "en": "Show several landscape examples before they start"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Rundgang: Grenzen unsichtbar, Terrain-Größe, Sprünge machbar",
+            "en": "Walk around: borders hidden, terrain size, jumps doable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "3.5",
+      "type": "wrapup",
+      "title": {
+        "de": "Abschluss",
+        "en": "Wrap Up"
+      },
+      "minutes": 10,
+      "slide": null,
+      "anchor": {
+        "de": "#h.rk79ofwnyrg1",
+        "en": "#h.rk79ofwnyrg1"
+      },
+      "items": [
+        {
+          "kind": "warn",
+          "text": {
+            "de": "Aufgabe in Classroom schon VOR der Session anlegen",
+            "en": "Create the Classroom assignment BEFORE the session"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Ca. 10 Min vor Ende: speichern mit CMD+S oder File, Save",
+            "en": "About 10 min before the end: save with CMD+S or File, Save"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Befehl + S\" und \"Datei, Speichern\".",
+            "en": "The German site says \"Befehl + S\" and \"Datei, Speichern\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Export Package: Rechtsklick auf Assets, alles angehakt prüfen",
+            "en": "Export Package: right-click Assets, check everything is ticked"
+          },
+          "note": {
+            "de": "Die deutsche Seite sagt \"Paket exportieren\".",
+            "en": "The German site says \"Paket exportieren\"."
+          }
+        },
+        {
+          "kind": "demo",
+          "text": {
+            "de": "Export, Name Tag3_Vorname_Nachname, Ort Desktop, Save",
+            "en": "Export, name Day3_Name_Surname, location Desktop, Save"
+          }
+        },
+        {
+          "kind": "save",
+          "text": {
+            "de": "Datei und 2-3 Screenshots in Classroom hochladen",
+            "en": "Upload the file and 2-3 screenshots to Classroom"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Grüner Haken an der hochgeladenen Datei bei allen",
+            "en": "Green tick on the uploaded file for everyone"
+          }
+        },
+        {
+          "kind": "check",
+          "text": {
+            "de": "Alle anwesenden Teens haben ihre Anwesenheit bestätigt",
+            "en": "All present Teens have marked their attendance"
+          }
+        }
+      ]
+    }
+  ]
+}
