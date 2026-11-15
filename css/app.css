@@ -756,8 +756,6 @@ main {
 }
 
 .now {
-  position: sticky;
-  top: 6px;
   z-index: 10;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -770,39 +768,56 @@ main {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* Compact bar while stuck (narrow screens): minimap + title, remaining, play. */
-.now-compact {
-  display: none;
-  align-items: center;
-  gap: 12px;
-  min-height: 48px;
+/* Compact bar (narrow screens): fixed to the top once the panel has scrolled away. */
+.pin-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: calc(6px + env(safe-area-inset-top, 0px)) 8px 0;
+  transform: translateY(-110%);
+  transition: transform 0.18s ease-out;
+  pointer-events: none;
+}
+
+.pin-bar.show {
+  transform: none;
+  pointer-events: auto;
+}
+
+.pin-bar-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 4px;
+  padding: 8px 12px 8px 16px;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   cursor: pointer;
 }
 
-.now.compact {
-  gap: 4px;
-  padding: 8px 12px 8px 16px;
-}
-
-.now.compact > :not(.minimap):not(.now-compact) {
-  display: none;
-}
-
-.now.compact .now-compact {
-  display: flex;
-}
-
-.now.compact .minimap.interactive {
+.pin-bar .minimap {
   padding: 8px 0;
   margin: 0;
 }
 
-.now.compact .minimap.interactive .mm-track {
+.pin-bar .mm-track {
   height: 8px;
 }
 
-.now.compact .mm-head {
+.pin-bar .mm-head {
   height: 16px;
+}
+
+.now-compact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
 }
 
 .now-compact-title {
@@ -1585,6 +1600,16 @@ body[data-view="beamer"] main {
 /* ---- Larger screens ---- */
 
 @media (min-width: 900px) {
+  /* Enough room: the full panel stays in view, no compact bar. */
+  .now {
+    position: sticky;
+    top: 6px;
+  }
+
+  .pin-bar {
+    display: none;
+  }
+
   .sec {
     scroll-margin-top: calc(var(--now-h, 200px) + 16px);
   }

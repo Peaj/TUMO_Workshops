@@ -13,8 +13,6 @@ import { minimap } from "./minimap.js";
 import { legend } from "./legend.js";
 
 const MINUTE = 60000;
-const WIDE = "(min-width: 900px)"; // wide screens keep the full panel
-const EXPAND_SCROLL_PX = 24; // a tapped-open compact panel collapses again after this much scrolling
 
 export function mount(root, { workshopId, n }) {
   root.replaceChildren(h("p", { class: "empty" }, t("loading")));
@@ -131,7 +129,9 @@ function build(root, workshop, session) {
     ctl("skipForward", t("nextSection"), next)
   );
 
-  // Compact bar shown while the panel is stuck on narrow screens: title, remaining, play.
+  // Compact bar, fixed to the top of the screen once the panel has scrolled out of view
+  // (narrow screens): thin minimap, title, remaining, play. It lives outside the page
+  // flow, so showing or hiding it can never move the content or the scroll position.
   const compactTitle = h("span", { class: "now-compact-title" });
   const compactRemain = h("span", { class: "now-compact-remain num" });
   const compactPlay = h("button", {
@@ -142,13 +142,18 @@ function build(root, workshop, session) {
       togglePlay();
     },
   });
-  const compactRow = h("div", { class: "now-compact", onclick: () => setExpanded(true) }, compactTitle, compactRemain, compactPlay);
+  const compactRow = h("div", { class: "now-compact" }, compactTitle, compactRemain, compactPlay);
+  const barMap = minimap(session);
+  const bar = h(
+    "div",
+    { class: "pin-bar", onclick: () => scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" }) },
+    h("div", { class: "pin-bar-inner" }, barMap.el, compactRow)
+  );
 
   const panel = h(
     "section",
     { class: "now", "aria-live": "off" },
     map.el,
-    compactRow,
     h(
       "div",
       { class: "now-main" },
@@ -289,45 +294,18 @@ function build(root, workshop, session) {
     h("div", { class: "s-actions-btns" }, h("button", { class: "btn ghost small", type: "button", onclick: clearTicks, html: `${icon("trash")}<span>${t("clearTicks")}</span>` }), resetBtn)
   );
 
-  // ---- Compact panel ----
-  // The spacer keeps the page height constant when the panel collapses or expands,
-  // so the content never jumps under the reader's eyes.
+  // ---- Compact bar ----
 
-  const sentinel = h("div", { class: "now-sentinel" });
-  const spacer = h("div", { class: "now-spacer" });
-  const wide = matchMedia(WIDE);
-  let stuck = false;
-  let expanded = false;
-  let expandedAt = 0;
-  let fullHeight = 0;
+  root.replaceChildren(h("div", { class: "session-view" }, header, panel, mapLegend, list, footer, legend("items")));
+  // On the body, not inside the view: a transformed ancestor would un-fix it.
+  document.body.append(bar);
 
-  function applyCompact() {
-    const compact = stuck && !expanded && !wide.matches;
-    panel.classList.toggle("compact", compact);
-    if (!compact) fullHeight = panel.offsetHeight;
-    spacer.style.height = compact ? `${Math.max(0, fullHeight - panel.offsetHeight)}px` : "0";
-  }
-
-  function setExpanded(value) {
-    expanded = value;
-    expandedAt = scrollY;
-    applyCompact();
-  }
-
-  const onScroll = () => {
-    if (expanded && Math.abs(scrollY - expandedAt) > EXPAND_SCROLL_PX) setExpanded(false);
-  };
-
-  root.replaceChildren(h("div", { class: "session-view" }, header, sentinel, panel, spacer, mapLegend, list, footer, legend("items")));
-
-  const stickObserver = new IntersectionObserver(([entry]) => {
-    stuck = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-    if (!stuck) expanded = false;
-    applyCompact();
-  });
-  stickObserver.observe(sentinel);
-  addEventListener("scroll", onScroll, { passive: true });
-  wide.addEventListener("change", applyCompact);
+  // Show the bar as soon as the panel's time and controls are gone, not only its last pixel.
+  const barObserver = new IntersectionObserver(
+    ([entry]) => bar.classList.toggle("show", !entry.isIntersecting && entry.boundingClientRect.top < 0),
+    { rootMargin: "-110px 0px 0px 0px" }
+  );
+  barObserver.observe(panel);
 
   // Keep the sticky panel's height available for scroll-margin of the cards.
   const resize = new ResizeObserver(() => root.style.setProperty("--now-h", `${panel.offsetHeight}px`));
@@ -356,6 +334,7 @@ function build(root, workshop, session) {
     const section = sections[index];
 
     map.update(pos, started);
+    barMap.update(pos, started);
 
     nowBadge.hidden = done;
     if (!done) {
@@ -417,9 +396,8 @@ function build(root, workshop, session) {
     update,
     destroy() {
       resize.disconnect();
-      stickObserver.disconnect();
-      removeEventListener("scroll", onScroll);
-      wide.removeEventListener("change", applyCompact);
+      barObserver.disconnect();
+      bar.remove();
       offTicks();
       offGroups();
       root.style.removeProperty("--now-h");
