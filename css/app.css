@@ -530,9 +530,9 @@ main {
 }
 
 .session-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
-  align-content: start;
   transition: background-color 0.15s, transform 0.15s;
 }
 
@@ -545,8 +545,10 @@ main {
   font-size: 1.5rem;
 }
 
+/* Minimap and status sit at the bottom of the tile, whatever the text length. */
 .session-card .minimap {
-  margin-top: 6px;
+  margin-top: auto;
+  padding-top: 6px;
 }
 
 .session-card.missing {
