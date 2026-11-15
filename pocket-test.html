@@ -127,6 +127,12 @@ $("start").onclick = async () => {
   }
   if ($("optAudio").checked) {
     audioEl = new Audio(keepAliveUrl()); audioEl.loop = true;
+    // Log when something (another app, a call, the system) stops the keep-alive audio, and restart it.
+    audioEl.addEventListener("pause", () => {
+      if (!timer || !audioEl) return;
+      log("Audio wurde pausiert, starte neu");
+      audioEl.play().then(() => log("Audio läuft wieder")).catch((error) => log(`Audio-Neustart Fehler: ${error.message}`));
+    });
     try { await audioEl.play(); } catch (error) { log(`Audio Fehler: ${error.message}`); }
     if ("mediaSession" in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: "Pocket-Test läuft", artist: "TUMO Workshops" });
   }

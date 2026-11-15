@@ -2,13 +2,30 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#121316">
+<meta name="color-scheme" content="dark">
 <title>TUMO Workshops</title>
-<style>body{margin:0;padding:24px 16px;background:#14161a;color:#e8eaee;font:16px/1.5 system-ui,sans-serif}a{color:#7fb0ff}</style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+<script type="module" src="js/main.js"></script>
 </head>
 <body>
-<h1>TUMO Workshops</h1>
-<p>Im Aufbau. <a href="pocket-test.html">Pocket-Test</a></p>
+<header class="appbar">
+  <button id="backBtn" class="ctl" type="button" hidden></button>
+  <a class="brand" href="#/"><img src="icons/icon-192.png" alt="" width="28" height="28"><span id="brandName">TUMO Workshops</span></a>
+  <span class="appbar-spacer"></span>
+  <button id="syncDot" class="sync-dot" type="button" hidden></button>
+  <a id="beamerBtn" class="ctl" href="#/beamer"></a>
+  <a id="settingsBtn" class="ctl" href="#/settings"></a>
+</header>
+<main id="view"></main>
+<button id="banner" class="banner" type="button" hidden><span class="banner-icon"></span><span class="banner-text"></span></button>
+<div id="toast" class="toast" role="status" hidden></div>
+<dialog id="dialog" class="dialog"></dialog>
+<noscript><p class="empty">JavaScript is required.</p></noscript>
 </body>
 </html>

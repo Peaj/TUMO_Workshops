@@ -1,0 +1,76 @@
+{
+  "id": 1,
+  "title": { "de": "Signal-Test", "en": "Alert test" },
+  "tumoTitle": { "de": "Demo: Alle Abschnitts- und Punkttypen", "en": "Demo: all section and item types" },
+  "takeaway": { "de": "Jede Minute wechselt der Abschnitt, damit Ton, Vibration und Benachrichtigung schnell geprüft werden können.", "en": "The section changes every minute so sound, vibration and notification can be checked quickly." },
+  "slides": { "de": "https://docs.google.com/presentation/d/demo-deck-de", "en": "https://docs.google.com/presentation/d/demo-deck-en" },
+  "source": { "de": "https://sites.google.com/view/demo-de", "en": "https://sites.google.com/view/demo-en" },
+  "sections": [
+    {
+      "id": "1.1",
+      "type": "review",
+      "title": { "de": "Rückblick", "en": "Review" },
+      "minutes": 1,
+      "slide": 2,
+      "anchor": { "de": "#h.demo-rueckblick", "en": "#h.demo-review" },
+      "items": [
+        { "kind": "ask", "text": { "de": "Frage: Was haben wir letztes Mal gebaut?", "en": "Ask: What did we build last time?" },
+          "note": { "de": "Zwei, drei Teens antworten lassen, nicht mehr.", "en": "Let two or three Teens answer, no more." } },
+        { "kind": "info", "text": { "de": "Ablauf von heute kurz zeigen", "en": "Briefly show today's plan" } }
+      ]
+    },
+    {
+      "id": "1.2",
+      "type": "presentation",
+      "title": { "de": "Directional Light", "en": "Directional Light" },
+      "minutes": 1,
+      "slide": 4,
+      "anchor": { "de": "#h.demo-licht", "en": "#h.demo-light" },
+      "items": [
+        { "kind": "explain", "text": { "de": "Directional Light erklären: Richtung zählt, Position nicht", "en": "Explain Directional Light: direction matters, position does not" } },
+        { "kind": "demo", "text": { "de": "Im Scene View die Sonne drehen", "en": "Rotate the sun in the Scene View" },
+          "note": { "de": "Rotation X auf 10 stellen ergibt Abendlicht.", "en": "Setting rotation X to 10 gives evening light." } },
+        { "kind": "warn", "text": { "de": "Achtung: Licht in der Hierarchy nicht doppelt anlegen", "en": "Watch out: do not add a second light to the Hierarchy" } }
+      ]
+    },
+    {
+      "id": "1.3",
+      "type": "task",
+      "title": { "de": "Aufgabe: Stimmung", "en": "Task: mood" },
+      "minutes": 1,
+      "slide": 7,
+      "anchor": { "de": "#h.demo-aufgabe", "en": "#h.demo-task" },
+      "items": [
+        { "kind": "task", "text": { "de": "Aufgabe: Level in Abendstimmung tauchen", "en": "Task: give the level an evening mood" },
+          "note": { "de": "Wer fertig ist, probiert eine Point Light Laterne.", "en": "Whoever is done tries a Point Light lantern." } },
+        { "kind": "check", "text": { "de": "Rundgang: Skybox und Licht passen zusammen?", "en": "Walk around: do Skybox and light match?" } },
+        { "kind": "warn", "text": { "de": "Play Mode beenden, bevor geändert wird", "en": "Exit Play Mode before changing anything" } }
+      ]
+    },
+    {
+      "id": "1.4",
+      "type": "other",
+      "title": { "de": "Show and Tell", "en": "Show and Tell" },
+      "minutes": 1,
+      "slide": null,
+      "anchor": null,
+      "items": [
+        { "kind": "ask", "text": { "de": "Zwei Freiwillige zeigen ihr Level", "en": "Two volunteers show their level" } },
+        { "kind": "info", "text": { "de": "Applaus nach jeder Vorstellung", "en": "Applause after each presentation" } }
+      ]
+    },
+    {
+      "id": "1.5",
+      "type": "wrapup",
+      "title": { "de": "Abschluss", "en": "Wrap-up" },
+      "minutes": 1,
+      "slide": 9,
+      "anchor": { "de": "#h.demo-abschluss", "en": "#h.demo-wrapup" },
+      "items": [
+        { "kind": "save", "text": { "de": "Scene speichern und in Google Classroom hochladen", "en": "Save the Scene and upload to Google Classroom" },
+          "note": { "de": "CMD + S, dann File > Save Project.", "en": "CMD + S, then File > Save Project." } },
+        { "kind": "info", "text": { "de": "Ausblick: nächstes Mal Terrain", "en": "Outlook: Terrain next time" } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "_demo",
+  "title": { "de": "Demo-Workshop", "en": "Demo workshop" },
+  "subtitle": { "de": "Zum Testen: 5 Abschnitte à 1 Minute", "en": "For testing: 5 sections, 1 minute each" },
+  "sessionMinutes": 5,
+  "sessions": [1, 2]
+}
