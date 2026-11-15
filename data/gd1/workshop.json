@@ -1,0 +1,7 @@
+{
+  "id": "gd1",
+  "title": { "de": "Game Development 1", "en": "Game Development 1" },
+  "subtitle": { "de": "8 Sessions à 2 h · 4 Wochen", "en": "8 sessions, 2 h each · 4 weeks" },
+  "sessionMinutes": 120,
+  "sessions": [1, 2, 3, 4, 5, 6, 7, 8]
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pocket-Test</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; padding: 20px 16px 40px; background: #14161a; color: #e8eaee; font: 16px/1.5 system-ui, sans-serif; }
+  h1 { font-size: 1.3rem; margin: 0 0 4px; }
+  p { color: #a4a9b3; margin: 6px 0 14px; }
+  button { font: inherit; font-weight: 600; padding: 12px 18px; border-radius: 10px; border: 0; background: #3b82f6; color: #fff; margin: 0 8px 8px 0; }
+  button.ghost { background: #2a2e36; color: #e8eaee; }
+  label { display: block; margin: 6px 0; }
+  .stat { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0; }
+  .stat div { background: #1e2127; border-radius: 10px; padding: 10px 12px; }
+  .stat b { display: block; font-size: 1.4rem; }
+  .stat span { color: #a4a9b3; font-size: 0.85rem; }
+  pre { background: #1e2127; border-radius: 10px; padding: 12px; font-size: 0.8rem; white-space: pre-wrap; max-height: 50vh; overflow: auto; }
+</style>
+</head>
+<body>
+<h1>Pocket-Test</h1>
+<p>Start drücken, Handy sperren, 5 Minuten in die Tasche. Alle 30 Sekunden sollte es vibrieren. Danach entsperren und das Protokoll ansehen.</p>
+
+<label><input type="checkbox" id="optAudio" checked> Stilles Audio (hält die Seite wach)</label>
+<label><input type="checkbox" id="optNotify" checked> Benachrichtigung (vibriert im Sperrbildschirm)</label>
+<label><input type="checkbox" id="optChime" checked> Hörbarer Ton</label>
+
+<p>
+  <button id="start">Start</button>
+  <button id="stop" class="ghost">Stopp</button>
+  <button id="clear" class="ghost">Protokoll leeren</button>
+</p>
+
+<div class="stat">
+  <div><b id="sFired">0</b><span>Signale ausgelöst</span></div>
+  <div><b id="sLate">0</b><span>davon &gt; 3 s zu spät</span></div>
+  <div><b id="sGap">0 s</b><span>längste Timer-Lücke</span></div>
+  <div><b id="sPerm">?</b><span>Benachrichtigungen</span></div>
+</div>
+
+<pre id="log"></pre>
+
+<script>
+const INTERVAL = 30000;
+const $ = (id) => document.getElementById(id);
+let state = JSON.parse(localStorage.getItem("pocketTest") || "null") || { lines: [], fired: 0, late: 0, gap: 0 };
+let timer = null, nextDue = 0, lastTick = 0, n = 0, audioEl = null, ctx = null, reg = null;
+
+const stamp = () => new Date().toLocaleTimeString("de-DE");
+function log(text) {
+  state.lines.push(`${stamp()}  ${text}`);
+  if (state.lines.length > 200) state.lines.shift();
+  save(); paint();
+}
+function save() { localStorage.setItem("pocketTest", JSON.stringify(state)); }
+function paint() {
+  $("log").textContent = state.lines.slice().reverse().join("\n");
+  $("sFired").textContent = state.fired;
+  $("sLate").textContent = state.late;
+  $("sGap").textContent = `${(state.gap / 1000).toFixed(1)} s`;
+  $("sPerm").textContent = "Notification" in window ? Notification.permission : "n/a";
+}
+
+// A 20 Hz tone: not silent for the browser, inaudible on a phone speaker.
+function keepAliveUrl() {
+  const rate = 8000, seconds = 2, samples = rate * seconds;
+  const buffer = new ArrayBuffer(44 + samples * 2), view = new DataView(buffer);
+  const text = (offset, s) => [...s].forEach((c, i) => view.setUint8(offset + i, c.charCodeAt(0)));
+  text(0, "RIFF"); view.setUint32(4, 36 + samples * 2, true); text(8, "WAVEfmt ");
+  view.setUint32(16, 16, true); view.setUint16(20, 1, true); view.setUint16(22, 1, true);
+  view.setUint32(24, rate, true); view.setUint32(28, rate * 2, true); view.setUint16(32, 2, true); view.setUint16(34, 16, true);
+  text(36, "data"); view.setUint32(40, samples * 2, true);
+  for (let i = 0; i < samples; i++) view.setInt16(44 + i * 2, Math.sin((2 * Math.PI * 20 * i) / rate) * 1200, true);
+  return URL.createObjectURL(new Blob([buffer], { type: "audio/wav" }));
+}
+
+function chime() {
+  if (!ctx) return;
+  [880, 1175].forEach((freq, i) => {
+    const osc = ctx.createOscillator(), gain = ctx.createGain(), t = ctx.currentTime + i * 0.18;
+    osc.frequency.value = freq; osc.connect(gain); gain.connect(ctx.destination);
+    gain.gain.setValueAtTime(0.0001, t); gain.gain.exponentialRampToValueAtTime(0.4, t + 0.02); gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.5);
+    osc.start(t); osc.stop(t + 0.55);
+  });
+}
+
+async function fire(lateMs) {
+  n++; state.fired++; if (lateMs > 3000) state.late++;
+  const results = [];
+  if ($("optChime").checked) { chime(); results.push("Ton"); }
+  results.push(`vibrate=${navigator.vibrate ? navigator.vibrate([300, 120, 300]) : "n/a"}`);
+  if ($("optNotify").checked && reg && Notification.permission === "granted") {
+    try {
+      await reg.showNotification(`Abschnitt ${n}`, { body: `Signal ${n} um ${stamp()}`, tag: "pocket", renotify: true, vibrate: [300, 120, 300, 120, 300] });
+      results.push("Benachrichtigung ok");
+    } catch (error) { results.push(`Benachrichtigung Fehler: ${error.message}`); }
+  }
+  log(`Signal ${n} · ${(lateMs / 1000).toFixed(1)} s verspätet · ${document.visibilityState} · ${results.join(", ")}`);
+}
+
+function tick() {
+  const now = Date.now();
+  if (lastTick) state.gap = Math.max(state.gap, now - lastTick - 1000);
+  lastTick = now;
+  if (now >= nextDue) {
+    const late = now - nextDue;
+    nextDue += INTERVAL * Math.max(1, Math.ceil((now - nextDue + 1) / INTERVAL));
+    fire(late);
+  }
+  save(); paint();
+}
+
+$("start").onclick = async () => {
+  if (timer) return;
+  ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+  await ctx.resume();
+  if ("Notification" in window && Notification.permission === "default") await Notification.requestPermission();
+  if ("serviceWorker" in navigator) {
+    try { await navigator.serviceWorker.register("sw.js"); reg = await navigator.serviceWorker.ready; }
+    catch (error) { log(`Service Worker Fehler: ${error.message}`); }
+  }
+  if ($("optAudio").checked) {
+    audioEl = new Audio(keepAliveUrl()); audioEl.loop = true;
+    try { await audioEl.play(); } catch (error) { log(`Audio Fehler: ${error.message}`); }
+    if ("mediaSession" in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: "Pocket-Test läuft", artist: "TUMO Workshops" });
+  }
+  n = 0; lastTick = 0; nextDue = Date.now() + INTERVAL;
+  log(`Start · Audio=${$("optAudio").checked} · Benachrichtigung=${$("optNotify").checked} (${("Notification" in window) ? Notification.permission : "n/a"})`);
+  timer = setInterval(tick, 1000);
+};
+$("stop").onclick = () => {
+  if (!timer) return;
+  clearInterval(timer); timer = null;
+  if (audioEl) { audioEl.pause(); audioEl = null; }
+  log("Stopp");
+};
+$("clear").onclick = () => { state = { lines: [], fired: 0, late: 0, gap: 0 }; save(); paint(); };
+document.addEventListener("visibilitychange", () => { if (timer) log(`Sichtbarkeit: ${document.visibilityState}`); });
+paint();
+</script>
+</body>
+</html>
