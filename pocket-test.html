@@ -94,7 +94,10 @@ async function fire(lateMs) {
   results.push(`vibrate=${navigator.vibrate ? navigator.vibrate([300, 120, 300]) : "n/a"}`);
   if ($("optNotify").checked && reg && Notification.permission === "granted") {
     try {
-      await reg.showNotification(`Abschnitt ${n}`, { body: `Signal ${n} um ${stamp()}`, tag: "pocket", renotify: true, vibrate: [300, 120, 300, 120, 300] });
+      // A fresh notification each time (new tag, old ones closed): an update of an
+      // existing notification may alert more quietly than a new one.
+      (await reg.getNotifications()).forEach((old) => old.close());
+      await reg.showNotification(`Abschnitt ${n}`, { body: `Signal ${n} um ${stamp()}`, tag: `pocket-${n}`, silent: false, vibrate: [300, 120, 300, 120, 300] });
       results.push("Benachrichtigung ok");
     } catch (error) { results.push(`Benachrichtigung Fehler: ${error.message}`); }
   }
